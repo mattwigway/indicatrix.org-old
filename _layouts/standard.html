@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}&mdash;Matt Conway</title>
+
+    {% include head-includes.html %}
+
+  </head>
+  <body>
+    {% include navbar.html %}
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1>Matt Conway</h1>
+        <p>Coding and transit&mdash;that's me!</p>
+      </div>
+
+      <div class="row">
+        <div class="span10">
+          {{ content }}
+        </div>
+        <div class="span2">
+          <p>Really cool sidebar</p>
+        </div>
+      </div>
+
+      {% include boilerplate.html %}
+    </div>
+    {% include end-of-body-includes.html %}
+  </body>
