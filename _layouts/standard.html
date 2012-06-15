@@ -12,7 +12,8 @@
     <div class="container">
       <div class="hero-unit">
         <h1>Matt Conway</h1>
-        <p>Coding and transit&mdash;that's me!</p>
+        <p>A blog about mapping, Python, GIS, JavaScript, transit, open data,
+          planning, &c.</p>
       </div>
 
       <div class="row">
@@ -20,9 +21,11 @@
           {{ content }}
         </div>
         <div class="span2">
-          <p>Really cool sidebar</p>
+          {% include sidebar.html %}
         </div>
       </div>
+
+      <div class="vspacer5"></div>
 
       {% include boilerplate.html %}
     </div>
