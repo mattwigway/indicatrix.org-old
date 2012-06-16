@@ -1,2 +1,7 @@
 .center { text-align: center }
 .vspacer5 { height: 70px }
+/* override bootstrap, make it darker */
+a { color: #0066aa }
+.previous { float: left }
+.next { float: right }
+.clear { clear: both }
