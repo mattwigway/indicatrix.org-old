@@ -14,7 +14,7 @@ tags:
 - raster
 ---
 
-I needed to do some conditionals in the QGIS raster calculator, but it doesn't support that—or at least doesn't seem to. But it does support logical operators, with a result of either 0 or 1. For instance, here's the script I wrote:
+I needed to do some conditionals in the QGIS raster calculator, but it doesn't support that---or at least doesn't seem to. But it does support logical operators, with a result of either 0 or 1. For instance, here's the script I wrote:
 
 <pre>
 # Subtract them
