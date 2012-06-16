@@ -5,7 +5,8 @@ title: Home
 
 {% for post in paginator.posts %}
   {% assign content = post.content %}
-  {% include post.html%}
+  {% include post.html %}
+  <div class="vspacer5"></div>
 {% endfor %}
 
 <div class="paginator">
