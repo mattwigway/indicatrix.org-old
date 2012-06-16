@@ -5,3 +5,5 @@ markdown: rdiscount
 lsi: true
 rdiscount:
   extensions: [smart]
+exclude: [Makefile]
+destination: ../blog_site
