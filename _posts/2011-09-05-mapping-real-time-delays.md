@@ -10,7 +10,7 @@ wordpress_id: '174'
 
 **Update 9/8/2011: I've posted [a short piece about the significant biases and issues with this visualization](/2011/09/08/mapping-real-time-delays-review/).**
 
-[![](/a/2011-09-05-mapping-real-time-delays/idwdelay.png)](http://indicatrix.files.wordpress.com/2011/09/idwdelay.png)
+[![](/a/2011-09-05-mapping-real-time-delays/idwdelay.png)](/a/2011-09-05-mapping-real-time-delays/idwdelay.png)
 
 _TriMet delays on the evening of 9/5/2011. They cleared up the large delay east of Portland not long after I took this screenshot._
 
