@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title></title>
+		<description></description>
+		<link></link>
+		
+			<item>
+				<title>Migrating to Jekyll</title>
+				<description>&lt;p&gt;Welcome! I&amp;rsquo;m currently migrating this blog to &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki&quot;&gt;Jekyll&lt;/a&gt;; comments should be restored soon.&lt;/p&gt;
+</description>
+				<published>Sat Jun 16 00:00:00 -0700 2012</published>
+				<link>/2012/06/16/migrating-to-jekyll/</link>
+			</item>
+		
+			<item>
+				<title>Measuring Urban Mobility and Accessibility Using OpenTripPlanner Analyst</title>
+				<description>&lt;p&gt;&lt;a href=&quot;/a/2012-04-29-measuring-urban-mobility-and-accessibility-using-opentripplanner-analyst/urbanmobilityposter.png&quot;&gt;&lt;img src=&quot;/a/2012-04-29-measuring-urban-mobility-and-accessibility-using-opentripplanner-analyst/urbanmobilityposter.png&quot; alt=&quot;Thumbnail of the poster&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I presented a poster on &lt;a href=&quot;http://github.com/openplans/opentripplanner-analyst&quot;&gt;OpenTripPlanner Analyst&lt;/a&gt; at the &lt;a href=&quot;http://calgeog.org&quot;&gt;California Geographical Society&lt;/a&gt; 2012 conference. Here are the poster and some companion materials:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/a/cgs2012/urbanmobilityposter.pdf&quot;&gt;Poster (PDF, 1.7MB)&lt;/a&gt;&amp;mdash;-the poster itself.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/a/cgs2012/urbanmobilitymapbook.pdf&quot;&gt;Maps (PDF, 7.8MB)&lt;/a&gt;&amp;mdash;-all of the maps that were present on the poster. Some were somewhat small, here is a PDF of all of them in vector format, suitable for stretching across the sides of large buildings.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/a/cgs2012/urbanmobilitymethodology.pdf&quot;&gt;Methodology (PDF, 207KB)&lt;/a&gt;&amp;mdash;-the methodology behind making each of the figures. This is a more in-depth, technical explanation than was provided on the poster itself.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;You may also want to visit the homepage of the &lt;a href=&quot;http://opentripplanner.com&quot;&gt;OpenTripPlanner Project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, you may want to see some of the other things I&amp;rsquo;m working on by visiting &lt;a href=&quot;/&quot;&gt;my blog&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<published>Sun Apr 29 16:50:50 -0700 2012</published>
+				<link>cgs2012</link>
+			</item>
+		
+			<item>
+				<title>Elevators in OpenTripPlanner</title>
+				<description>&lt;p&gt;I&amp;rsquo;ve been working on the &lt;a href=&quot;http://opentripplanner.org&quot;&gt;OpenTripPlanner&lt;/a&gt; project quite a bit lately. One thing I did a month or so ago was to implement elevator support in the routing engine. I decomposed OSM nodes tagged highway=elevator by their constituent levels, and built edges between them to represent boarding, riding on, and alighting from an elevator. I was very impressed with the friendliness and responsiveness of the community.&lt;/p&gt;
+
+&lt;p&gt;One challenge was parsing OSM levels. They can come from multiple sources&amp;mdash;-level_map relations, level tags or layer tags. I wanted to support all of these, or any combination (on a single elevator). I originally did this by noting the source and adding 0, 1000 or 2000 to the level, but Andrew Byrd has made an OSMLevel class which handles this much more neatly. Level maps allow levels to be named, which is quite nice: &amp;ldquo;take elevator to garage&amp;rdquo; instead of &amp;ldquo;take elevator to -1.&amp;rdquo; So, for all OSM mappers out there, here is a quick guide to making routable elevators:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tag your elevator nodes highway=elevator&lt;/li&gt;
+&lt;li&gt;Add access restrictions: wheelchair=yes and bicycle=yes tags&lt;/li&gt;
+&lt;li&gt;Use an OSM Level Map relation if there is any possibility that level names would not be clear.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;em&gt;EDIT:&lt;/em&gt; To clarify, the level annotations are always on the &lt;em&gt;ways&lt;/em&gt; connecting to the elevators, not the elevator nodes themselves.&lt;/p&gt;
+</description>
+				<published>Sun Apr 01 21:00:53 -0700 2012</published>
+				<link>/2012/04/01/elevators-in-opentripplanner/</link>
+			</item>
+		
+			<item>
+				<title>BART Shocker: First Inner-Core Infill Station Since Embarcadero</title>
+				<description>&lt;p&gt;BART shocked Bay Area transit enthusiasts this morning with an announcement that it plans to build a new infill station, to serve all San Francisco lines, at Treasure Island.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Treasure Island has long been underserved by transit,&amp;rdquo; said a BART employee, who is heading the project and acting as a liaison between the agencies involved. &amp;ldquo;The residents have long been frustrated that they live within a mile of rail rapid transit but cannot access it.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The announcement has met with mixed results. While most residents of Treasure Island are ecstatic, East Bay commuters are not so pleased. One person, who lives in Castro Valley but commutes via BART daily to his job as a web designer in San Francisco&amp;rsquo;s Mission, complained that it will slow service. &amp;ldquo;BART travels at up to 80 mph in the Transbay Tube, crossing the Bay in just a few minutes. By adding a stop in the middle of that, you not only add the 20-30 seconds of time at the stop, but also the time it takes to accelerate and decelerate to that stop.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Cyclists, however, are happy about the project. The new eastern span of the Bay Bridge will sport a bike path, but the western span, not scheduled for replacement, does not. By allowing a quick connection between the Yerba Buena Island and San Francisco, a cyclist can ride to Yerba Buena, then catch BART for a quick ride into the city. Responding to the head of the Greater Golden Gate, Gough and Geary Boulevard Cyclists' Association, a BART employee confirmed that the cycle link is a critical part of the project, and that the station will have new electronic bike lockers, as well as easy bicycle access from the bridge.&lt;/p&gt;
+
+&lt;p&gt;For anyone who hasn&amp;rsquo;t caught it yet, note &lt;a href=&quot;http://en.wikipedia.org/wiki/April_Fools%27_Day&quot;&gt;date of issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And if you still haven&amp;rsquo;t caught it, read &lt;a href=&quot;http://en.wikipedia.org/wiki/April_Fools%27_Day&quot;&gt;this article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Happy April Fools' Day!&lt;/p&gt;
+</description>
+				<published>Sun Apr 01 05:15:09 -0700 2012</published>
+				<link>/2012/04/01/bart-shocker-first-inner-core-infill-station-since-embarcadero/</link>
+			</item>
+		
+			<item>
+				<title>Conditionals in the QGIS raster calculator</title>
+				<description>&lt;p&gt;I needed to do some conditionals in the QGIS raster calculator, but it doesn&amp;rsquo;t support that&amp;mdash;-or at least doesn&amp;rsquo;t seem to. But it does support logical operators, with a result of either 0 or 1. For instance, here&amp;rsquo;s the script I wrote:&lt;/p&gt;
+
+&lt;pre&gt;
+# Subtract them
+((DavisQuad2012-02-25T16_00_00Z@1  -  DavisQuad2012-02-29T16_00_00Z@1)*
+# Multiply by 1 if neither is 255 (NoData), 0 otherwise
+(DavisQuad2012-02-25T16_00_00Z@1 != 255 AND DavisQuad2012-02-29T16_00_00Z@1 != 255))
+# Subtract 32768 if either one was NoData, giving us -32768 for NoData.
+-
+(32768*(DavisQuad2012-02-25T16_00_00Z@1 = 255 OR DavisQuad2012-02-29T16_00_00Z@1 = 255))
+&lt;/pre&gt;
+
+
+&lt;p&gt;Of course, you can&amp;rsquo;t actually put the comments in. But what it does is this: First, I subtract one raster from the other and multiply that by the logical operation that neither one contains NoData. That gives me the difference of the rasters, or 0 if either one contains NoData. Then I subtract 32768 multiplied by the inverse of the aforementioned logical operation, so any pixel with a NoData value in either of the original rasters is -32768 in the new one.&lt;/p&gt;
+
+&lt;p&gt;Note: I expanded on an idea from the GDAL &lt;a href=&quot;http://trac.osgeo.org/gdal/browser/trunk/gdal/swig/python/scripts/gdal_calc.py&quot;&gt;gdal_calc.py&lt;/a&gt; script.&lt;/p&gt;
+</description>
+				<published>Sat Mar 31 21:28:35 -0700 2012</published>
+				<link>/2012/03/31/conditionals-in-the-qgis-raster-calculator/</link>
+			</item>
+		
+			<item>
+				<title>Conditional Labels in QGIS</title>
+				<description>&lt;p&gt;I fairly commonly find myself in a situation where I would like to display one label for certain features and another for other features in the same layer. QGIS doesn&amp;rsquo;t have an official way to split labels up into categories, and until now I&amp;rsquo;d resorted to having two layers to render otherwise identical features. But, in the new, excellent &lt;a href=&quot;http://woostuff.wordpress.com/2011/10/27/expression-based-labeling/&quot;&gt;expression based labeling&lt;/a&gt; from Nathan Woodrow, I realized one can use an SQL CASE statement. For instance, one time I need to use two types labels is when labeling roads in OpenStreetMap: I want to use the name tag, &lt;em&gt;unless&lt;/em&gt; the feature has a ref tag defined (a name tag might be &amp;lsquo;Capital City Freeway&amp;rsquo;, while the ref tag would be &amp;lsquo;US 50&amp;rsquo;). Here&amp;rsquo;s how I solved that particular problem:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;CASE&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;WHEN&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ref&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;THEN&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ref&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;ELSE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;END&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;For now, anyhow, you&amp;rsquo;ll need to be running the dev build of QGIS. Happy GISing!&lt;/p&gt;
+</description>
+				<published>Sat Mar 03 21:53:31 -0800 2012</published>
+				<link>/2012/03/03/conditional-labels-in-qgis/</link>
+			</item>
+		
+			<item>
+				<title>More Basemaps in QGIS</title>
+				<description>&lt;p&gt;One of the more popular posts on this blog has been my piece on &lt;a href=&quot;/2011/04/06/basemaps-in-qgis/&quot;&gt;adding basemaps to QGIS&lt;/a&gt;. While the OpenLayer plugin is great, one of the things that I find dissatisfying is that it requires reprojecting your data to match the EPSG:3857 basemap. I often work in State Plane, and I&amp;rsquo;d just as soon have my data stay in that projection, which will also minimize local distortion. Well, as it turns out, one can add tiled map services as GDAL raster layers, with all the benefits that entails (e.g. reprojection). What you need to do is create an XML file like the following (which is lifted almost verbatim from &lt;a href=&quot;http://www.gdal.org/frmt_wms.html&quot;&gt;the GDAL website&lt;/a&gt;, specifically &lt;a href=&quot;http://www.gdal.org/frmt_wms_openstreetmap_tms.xml&quot;&gt;this file&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;GDAL_WMS&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Service&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;TMS&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- note: if you use this file verbatim, you *must* credit MapQuest and OpenStreetMap! --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;ServerUrl&amp;gt;&lt;/span&gt;http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ServerUrl&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Service&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;DataWindow&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;UpperLeftX&amp;gt;&lt;/span&gt;-20037508.34&lt;span class=&quot;nt&quot;&gt;&amp;lt;/UpperLeftX&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;UpperLeftY&amp;gt;&lt;/span&gt;20037508.34&lt;span class=&quot;nt&quot;&gt;&amp;lt;/UpperLeftY&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;LowerRightX&amp;gt;&lt;/span&gt;20037508.34&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LowerRightX&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;LowerRightY&amp;gt;&lt;/span&gt;-20037508.34&lt;span class=&quot;nt&quot;&gt;&amp;lt;/LowerRightY&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;TileLevel&amp;gt;&lt;/span&gt;18&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TileLevel&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;TileCountX&amp;gt;&lt;/span&gt;1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TileCountX&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;TileCountY&amp;gt;&lt;/span&gt;1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TileCountY&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;YOrigin&amp;gt;&lt;/span&gt;top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/YOrigin&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/DataWindow&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Projection&amp;gt;&lt;/span&gt;EPSG:3857&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Projection&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;BlockSizeX&amp;gt;&lt;/span&gt;256&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BlockSizeX&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;BlockSizeY&amp;gt;&lt;/span&gt;256&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BlockSizeY&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;BandsCount&amp;gt;&lt;/span&gt;3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BandsCount&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;Cache/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/GDAL_WMS&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Change the ServerUrl to your Tiled Map Service server (this one is for MapQuest Open Tiles), then go into QGIS, Layer-&amp;gt;Add Raster Layer and select the XML file.&lt;/p&gt;
+
+&lt;p&gt;A few caveats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The OpenLayers plugin automatically adds the required attributions, at least for OSM. This can be nice or not—nice in that you don&amp;rsquo;t have to remember to add the attribution, not so nice in that you can&amp;rsquo;t choose where to place the attribution; it&amp;rsquo;s always in the lower-right.&lt;/li&gt;
+&lt;li&gt;Reprojecting layers with text may yield strange skewing and distortion.&lt;/li&gt;
+&lt;li&gt;You need to be sure that you use these services legally (as you did with OpenLayers plugin).&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+
+&lt;p&gt;You can also convert tiles to GeoTIFF using gdal_translate, but I suspect most TMS providers would prefer you didn&amp;rsquo;t.&lt;/p&gt;
+</description>
+				<published>Thu Feb 02 17:55:11 -0800 2012</published>
+				<link>/2012/02/02/more-basemaps-in-qgis/</link>
+			</item>
+		
+			<item>
+				<title>Transit to Everywhere</title>
+				<description>&lt;p&gt;&lt;a href=&quot;/a/2011-12-30-transit-to-everywhere/toeverywheresftransit10.png&quot;&gt;&lt;img src=&quot;/a/2011-12-30-transit-to-everywhere/toeverywheresftransit10.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+&lt;em&gt;Data courtesy MapQuest and OpenStreetMap CC-BY-SA, the City and County of San Francisco, and Bay Area Rapid Transit&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an overlay of the transit and walking trip plans generated by OpenTripPlanner from Powell and Market to every other intersection in San Francisco, after &lt;a href=&quot;http://www.flickr.com/photos/walkingsf/6536396399/&quot;&gt;Eric Fischer&amp;rsquo;s map of walking routes&lt;/a&gt; to every intersection in San Francisco. It brings out the transit routes but also shows well-used walking routes. The lines do not vary in width (don&amp;rsquo;t let Market Street fool you, it&amp;rsquo;s actually several lines&amp;emdash;BART, MUNI rail in 2 directions, Muni bus, walking&amp;emdash;very near each other). The lines fade where there are fewer routes using them, because they are rendered as black set at 10% opacity. Where there are more lines overlapping, the lines become darker, in what I believe is a log (or log-like) scale. It ended up just mostly being a map of San Francisco, with transit routes emphasized. It doesn&amp;rsquo;t show potential utilization of the transit system, because the routes are not weighted (it would probably be wise to weight the routes by the density of the block they terminate in and by their service area; i.e., estimate the number of people within the Thiessen polygon of each intersection and weight the route by that). Also, I had difficulty finding an opacity level where the usage of transit routes fades towards the end (as it clearly should) but still shows the streets that walked down by just one or two trip plans.&lt;/p&gt;
+
+&lt;p&gt;I think the data I used to make this map could possibly be better utilized to make a cartogram of San Francisco transit times (&lt;a href=&quot;http://www.flickr.com/photos/walkingsf/6350997842/in/photostream&quot;&gt;like another of Eric Fischer&amp;rsquo;s maps&lt;/a&gt;, but including transfers and walking times).&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d also like to make a companion map using the OTP bike router. I think it could look really interesting in San Francisco, because the router will try to avoid hills.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methodology&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I set up an instance of &lt;a href=&quot;http://opentripplanner.org&quot;&gt;OpenTripPlanner&lt;/a&gt; using a graph built from &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; data for the San Francisco area, as well as GTFS data from &lt;a href=&quot;http://bart.gov&quot;&gt;BART&lt;/a&gt; and &lt;a href=&quot;http://sfmta.com&quot;&gt;San Francisco Muni&lt;/a&gt;. I used the pre-built binaries of OTP. I then used a Python script to request directions from Market and Powell to every other intersection in San Francisco, as defined in the StIntersections dataset from &lt;a href=&quot;http://gispub02.sfgov.org/website/sfshare/index2.asp&quot;&gt;here&lt;/a&gt;. I stored the directions in a PostGIS database. I used one machine as the OTP server, and ran the script and PostGIS on another machine, but I see no reason why they couldn&amp;rsquo;t be on the same machine. I used QGIS to render the map. For what it&amp;rsquo;s worth, I&amp;rsquo;ve &lt;a href=&quot;https://gist.github.com/1542816&quot;&gt;open-sourced the script I wrote&lt;/a&gt;. It may provide a good example of how to use the OTP JSON API in Python.&lt;/p&gt;
+</description>
+				<published>Fri Dec 30 20:03:46 -0800 2011</published>
+				<link>/2011/12/30/transit-to-everywhere/</link>
+			</item>
+		
+			<item>
+				<title>GitHub Image Diffs</title>
+				<description>&lt;p&gt;As you may have gathered, I like &lt;a href=&quot;http://git-scm.com&quot;&gt;Git&lt;/a&gt; and &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;. Today, I ran across a GitHub feature that is really cool and above and beyond the call of duty: not only do they produce and display diffs on text files, but also on image files! You can see &lt;a href=&quot;https://github.com/transit-appliance/Transit-Board-Hotel/commit/4209e30fde29c1557ef59be7df7d6686247e35df?diff-0=1-21&quot;&gt;an example in one of my repositories&lt;/a&gt;. Added points if you can figure out where the map tile is from!&lt;/p&gt;
+</description>
+				<published>Fri Dec 23 17:14:00 -0800 2011</published>
+				<link>/2011/12/23/as-you-may-have/</link>
+			</item>
+		
+			<item>
+				<title>Shapefiles in OpenLayers</title>
+				<description>&lt;p&gt;Update 2011-12-14: It seems that a lot of people are coming here from web searches with phrases like &amp;ldquo;shapefile openlayers.&amp;rdquo; If all you want to do is display your data in OpenLayers, I&amp;rsquo;d highly recommend using a program like &lt;a href=&quot;http://qgis.org&quot;&gt;Quantum GIS&lt;/a&gt; to convert your Shapefile to a more web-friendly format like KML or GeoJSON. Both of these formats can be read by OpenLayers directly, and you&amp;rsquo;ll see faster performance and more browser compatibility than if you were to load your Shapefiles directly.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/a/2011-12-13-shapefiles-in-openlayers/screenshot-at-2011-12-13-214616.png&quot;&gt;&lt;img src=&quot;/a/2011-12-13-shapefiles-in-openlayers/screenshot-at-2011-12-13-214616.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the last few days, I&amp;rsquo;ve been using Tom Carden&amp;rsquo;s &lt;a href=&quot;https://github.com/RandomEtc/shapefile-js&quot;&gt;shapefile-js&lt;/a&gt; library that reads ESRI Shapefiles in JavaScript, which I found via &lt;a href=&quot;http://www.prodevelop.es/es/blog/11/12/11/rendering-local-shapefiles-html5&quot;&gt;a post on the Prodevelop blog&lt;/a&gt;. The library is quite incredible, but his samples use a simple canvas for display. I thought it would be really cool if this could be integrated with &lt;a href=&quot;http://openlayers.org&quot;&gt;OpenLayers&lt;/a&gt;, so I created a bit of JavaScript to do so. You can give it a test drive &lt;a href=&quot;http://mattwigway.github.com/shapefile-js/ol_simple.html&quot;&gt;here&lt;/a&gt;, and look at the code &lt;a href=&quot;https://github.com/mattwigway/shapefile-js/tree/openlayers&quot;&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Basically, the library does all the heavy lifting. &lt;a href=&quot;https://github.com/mattwigway/shapefile-js/blob/openlayers/src/ol_shapefile.js#L16&quot;&gt;My code&lt;/a&gt; converts the shapefile shapes to WKT, which is passed to OpenLayers. Ultimately, I&amp;rsquo;d like to see an OpenLayers plugin so that you can use Shapefiles directly (i.e., an OpenLayers.Format.Shapefile). The main issue I see is that there needs to be a new strategy as well as a new format, because a) Shapefiles are made up of multiple pieces and b) we need to use the BinaryAjax loader since Shapefiles are binary.&lt;/p&gt;
+
+&lt;p&gt;My code seems to work well with points, lines and polygons, including the donut polygon case (to see for yourself, look at South Africa). (I did not test the donut polygon case, but I think it should work). More eyes are of course welcome! Also, the shapefile-js library can only handle pretty small Shapefiles. If I integrate this into OpenLayers, I think, long term, using a Web Worker thread to parse the Shapefile would be wise (which is another challenge to direct OpenLayers integration).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EDIT 2011-12-13 22:36 -0800:&lt;/strong&gt; I tested the donut polygon case.&lt;/p&gt;
+</description>
+				<published>Tue Dec 13 21:59:47 -0800 2011</published>
+				<link>/2011/12/13/shapefiles-in-openlayers/</link>
+			</item>
+		
+	</channel>
+</rss>

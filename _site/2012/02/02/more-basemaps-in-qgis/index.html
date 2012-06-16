@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>More Basemaps in QGIS&mdash;Indicatrix</title>
+
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/pygments.css" />
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand indicatrix" href="/">Indicatrix</a>
+      <ul class="nav">
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/copyright">Copyright</a></li>
+        <li><a href="/archive">Archive</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1><a href="/"><img src="/img/header.jpg" alt="Indicatrix" /></a></h1>
+        <div class="vspacer"></div>
+        <p>A blog about mapping, Python, GIS, JavaScript, transit, open data,
+          planning, &c.</p>
+      </div>
+
+      <div class="row">
+        <div class="span9">
+          
+<!-- link it b/c this template is used on the home page -->
+<a href="/2012/02/02/more-basemaps-in-qgis/">
+  <h2>More Basemaps in QGIS</h2>
+</a>
+<p class="author">by mattwigway on February 02, 2012</p>
+
+<p>One of the more popular posts on this blog has been my piece on <a href="/2011/04/06/basemaps-in-qgis/">adding basemaps to QGIS</a>. While the OpenLayer plugin is great, one of the things that I find dissatisfying is that it requires reprojecting your data to match the EPSG:3857 basemap. I often work in State Plane, and I&rsquo;d just as soon have my data stay in that projection, which will also minimize local distortion. Well, as it turns out, one can add tiled map services as GDAL raster layers, with all the benefits that entails (e.g. reprojection). What you need to do is create an XML file like the following (which is lifted almost verbatim from <a href="http://www.gdal.org/frmt_wms.html">the GDAL website</a>, specifically <a href="http://www.gdal.org/frmt_wms_openstreetmap_tms.xml">this file</a>):</p>
+
+<div class="highlight"><pre><code class="xml"><span class="nt">&lt;GDAL_WMS&gt;</span>
+  <span class="nt">&lt;Service</span> <span class="na">name=</span><span class="s">&quot;TMS&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- note: if you use this file verbatim, you *must* credit MapQuest and OpenStreetMap! --&gt;</span>
+    <span class="nt">&lt;ServerUrl&gt;</span>http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png<span class="nt">&lt;/ServerUrl&gt;</span>
+  <span class="nt">&lt;/Service&gt;</span>
+  <span class="nt">&lt;DataWindow&gt;</span>
+    <span class="nt">&lt;UpperLeftX&gt;</span>-20037508.34<span class="nt">&lt;/UpperLeftX&gt;</span>
+    <span class="nt">&lt;UpperLeftY&gt;</span>20037508.34<span class="nt">&lt;/UpperLeftY&gt;</span>
+    <span class="nt">&lt;LowerRightX&gt;</span>20037508.34<span class="nt">&lt;/LowerRightX&gt;</span>
+    <span class="nt">&lt;LowerRightY&gt;</span>-20037508.34<span class="nt">&lt;/LowerRightY&gt;</span>
+    <span class="nt">&lt;TileLevel&gt;</span>18<span class="nt">&lt;/TileLevel&gt;</span>
+    <span class="nt">&lt;TileCountX&gt;</span>1<span class="nt">&lt;/TileCountX&gt;</span>
+    <span class="nt">&lt;TileCountY&gt;</span>1<span class="nt">&lt;/TileCountY&gt;</span>
+    <span class="nt">&lt;YOrigin&gt;</span>top<span class="nt">&lt;/YOrigin&gt;</span>
+  <span class="nt">&lt;/DataWindow&gt;</span>
+  <span class="nt">&lt;Projection&gt;</span>EPSG:3857<span class="nt">&lt;/Projection&gt;</span>
+  <span class="nt">&lt;BlockSizeX&gt;</span>256<span class="nt">&lt;/BlockSizeX&gt;</span>
+  <span class="nt">&lt;BlockSizeY&gt;</span>256<span class="nt">&lt;/BlockSizeY&gt;</span>
+  <span class="nt">&lt;BandsCount&gt;</span>3<span class="nt">&lt;/BandsCount&gt;</span>
+  <span class="nt">&lt;Cache/&gt;</span>
+<span class="nt">&lt;/GDAL_WMS&gt;</span>
+</code></pre>
+</div>
+
+
+<p>Change the ServerUrl to your Tiled Map Service server (this one is for MapQuest Open Tiles), then go into QGIS, Layer-&gt;Add Raster Layer and select the XML file.</p>
+
+<p>A few caveats:</p>
+
+<ul>
+<li>The OpenLayers plugin automatically adds the required attributions, at least for OSM. This can be nice or not—nice in that you don&rsquo;t have to remember to add the attribution, not so nice in that you can&rsquo;t choose where to place the attribution; it&rsquo;s always in the lower-right.</li>
+<li>Reprojecting layers with text may yield strange skewing and distortion.</li>
+<li>You need to be sure that you use these services legally (as you did with OpenLayers plugin).</li>
+</ul>
+
+
+<p>Have fun!</p>
+
+<p>You can also convert tiles to GeoTIFF using gdal_translate, but I suspect most TMS providers would prefer you didn&rsquo;t.</p>
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2012/02/02/more-basemaps-in-qgis/">Permalink to this post</a>
+
+
+<div class="vspacer5"></div>
+<h3>Related posts (autogenerated)</h3>
+<ul>
+
+  <li><a href="/2012/06/16/migrating-to-jekyll/">Migrating to Jekyll <i>(June 16, 2012)</i></a></li>
+
+  <li><a href="cgs2012">Measuring Urban Mobility and Accessibility Using OpenTripPlanner Analyst <i>(April 29, 2012)</i></a></li>
+
+  <li><a href="/2012/04/01/elevators-in-opentripplanner/">Elevators in OpenTripPlanner <i>(April 01, 2012)</i></a></li>
+
+  <li><a href="/2012/04/01/bart-shocker-first-inner-core-infill-station-since-embarcadero/">BART Shocker: First Inner-Core Infill Station Since Embarcadero <i>(April 01, 2012)</i></a></li>
+
+  <li><a href="/2012/03/31/conditionals-in-the-qgis-raster-calculator/">Conditionals in the QGIS raster calculator <i>(March 31, 2012)</i></a></li>
+
+  <li><a href="/2012/03/03/conditional-labels-in-qgis/">Conditional Labels in QGIS <i>(March 03, 2012)</i></a></li>
+
+  <li><a href="/2011/12/30/transit-to-everywhere/">Transit to Everywhere <i>(December 30, 2011)</i></a></li>
+
+  <li><a href="/2011/12/23/as-you-may-have/">GitHub Image Diffs <i>(December 23, 2011)</i></a></li>
+
+  <li><a href="/2011/12/13/shapefiles-in-openlayers/">Shapefiles in OpenLayers <i>(December 13, 2011)</i></a></li>
+
+  <li><a href="/2011/11/12/another-la-metro-visualization/">Another LA Metro Visualization <i>(November 12, 2011)</i></a></li>
+
+
+        </div>
+        <div class="span3">
+          <div class="barbox">
+  <h3>Other Accounts</h3>
+  <ul class="linklist">
+    <li><a href="http://github.com/mattwigway">GitHub</a></li>
+    <li><a href="http://twitter.com/mattwigway">Twitter</a></li>
+  </ul>
+</div>
+
+<div class="barbox">
+  <h3>Blogroll</h3>
+  <ul class="linklist">
+    <li>
+      <a href="http://www.humantransit.org">Human Transit</a>
+    </li>
+    <li>
+      <a title="Free and Open Source GIS" href="http://underdark.wordpress.com">UnderDark</a>
+    </li>
+    <li>
+      <a href="http://transitappliance.org">Transit Appliance Development</a>
+    </li>
+    <li>
+      <a href="http://portlandtransport.org">Portland Transport</a>
+    </li>
+    <li>
+      <a href="http://thesource.metro.net">The Source&mdash;Los Angeles Metro</a>
+    </li>
+    <li>
+      <a title="The Source en Español" href="http://elpasajero.metro.net">El Pasajero&mdash;Metro de Los Angeles</a>
+    </li>
+    <li>
+      <a href="http://howweroll.trimet.org">How we Roll&mdash;Portland TriMet</a>
+    </li>
+    <li>
+      <a target="_blank" title="BRT for Silicon Valley." href="http://valleyrapid.org">Valley Rapid&mdash;VTA BRT</a>
+    </li>
+  </ul>
+</div>
+
+<div class="barbox">
+  <a href="/feed/feed.xml">New posts <img src="/img/feed.png" /></a>
+</div>
+
+        </div>
+      </div>
+
+      <div class="vspacer5"></div>
+
+      <div class="row">
+  <!-- force it center -->
+  <div class="span1">&nbsp;</div>
+  <div class="span10">
+    <p class="center">
+      <a href="/copyright">CC-BY-SA 3.0</a> by Matt Conway, 2011-2012. Created with
+      Jekyll and Bootstrap.
+    </p>
+  </div>
+</div>
+
+    </div>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>

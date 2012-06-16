@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home&mdash;Indicatrix</title>
+
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/pygments.css" />
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand indicatrix" href="/">Indicatrix</a>
+      <ul class="nav">
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/copyright">Copyright</a></li>
+        <li><a href="/archive">Archive</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="hero-unit">
+        <h1><a href="/"><img src="/img/header.jpg" alt="Indicatrix" /></a></h1>
+        <div class="vspacer"></div>
+        <p>A blog about mapping, Python, GIS, JavaScript, transit, open data,
+          planning, &c.</p>
+      </div>
+
+      <div class="row">
+        <div class="span9">
+          
+  
+  <!-- link it b/c this template is used on the home page -->
+<a href="/2011/11/12/another-la-metro-visualization/">
+  <h2>Another LA Metro Visualization</h2>
+</a>
+<p class="author">by mattwigway on November 12, 2011</p>
+
+<p><a href="/a/2011-11-12-another-la-metro-visualization/metro2011-11-10_manual.png"><img src="/a/2011-11-12-another-la-metro-visualization/metro2011-11-10_manual.png" alt="" /></a>
+Here&rsquo;s another visualization of the data used in <a href="/2011/11/12/making-transit-travel-speed-maps-with-open-source-gis/">the previous post</a>; I made the lines a lot finer, so the noise is less visible. It&rsquo;s easier than ever to see the Silver Line. I classed the data manually this time.</p>
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2011/11/12/another-la-metro-visualization/">Permalink to this post</a>
+
+  <div class="vspacer5"></div>
+
+  
+  <!-- link it b/c this template is used on the home page -->
+<a href="/2011/11/12/making-transit-travel-speed-maps-with-open-source-gis/">
+  <h2>Making Transit Travel Speed Maps with Open Source GIS</h2>
+</a>
+<p class="author">by mattwigway on November 12, 2011</p>
+
+<p>Update 2011-11-12 8:21 -0800: I just posted a <a href="/2011/11/12/another-la-metro-visualization/">visualization I like better</a>.
+<a href="/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102.png"><img src="/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102.png" alt="" /></a></p>
+
+<p>The Internet has been abuzz the past week regarding transit speed maps. It seems to have been spurred by <a href="http://bostonography.com/2011/an-mbta-bus-iness-day/">a post on Bostongraphy</a>, which was inspired by many of the <a href="http://www.flickr.com/search/?w=24431382@N03&amp;q=nextbus">amazing visualizations produced by Eric Fischer</a>, especially <a href="http://www.flickr.com/photos/walkingsf/4521616274/">this one</a>. Indeed, this blog has gotten a fair bit of traffic itself, because Andy Woodruff of Bostonography used my <a href="/2011/05/29/archiving-historical-data-from-nextbus/">avl2postgis</a> project to retrieve the data.</p>
+
+<p>Most people who have created these maps have used home-made solutions for the cartography, but I thought you should be able to do this with just stock SQL and QGIS. Using QGIS for the cartography allows you to bring in lots of useful tools, things like classification and ColorBrewer ramps.</p>
+
+<p>The main trick is converting the point data that is retrieved from NextBus into line data for mapping (more about the cartographic considerations of line and point data below, for now I&rsquo;ll focus on the technical aspects). After much whaling and gnashing of teeth, I figured out the spatial SQL to do this:</p>
+
+<div class="highlight"><pre><code class="sql"><span class="k">SELECT</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">oid</span><span class="p">,</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">vehicle</span><span class="p">,</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">route</span><span class="p">,</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">direction</span><span class="p">,</span> <span class="k">transform</span><span class="p">(</span><span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">loc_a</span><span class="p">.</span><span class="n">the_geom</span><span class="p">,</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">the_geom</span><span class="p">),</span> <span class="mi">26945</span><span class="p">)</span> <span class="k">AS</span> <span class="n">the_geom</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">ST_Length</span><span class="p">(</span><span class="k">transform</span><span class="p">(</span><span class="n">ST_MakeLine</span><span class="p">(</span><span class="n">loc_a</span><span class="p">.</span><span class="n">the_geom</span><span class="p">,</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">the_geom</span><span class="p">),</span> <span class="mi">26945</span><span class="p">))</span><span class="o">/</span>
+    <span class="p">(</span><span class="k">EXTRACT</span><span class="p">(</span><span class="n">EPOCH</span> <span class="k">FROM</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">time</span><span class="p">)</span> <span class="o">-</span> <span class="k">EXTRACT</span><span class="p">(</span><span class="n">EPOCH</span> <span class="k">FROM</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">time</span><span class="p">)))</span> <span class="o">*</span>
+    <span class="mi">2</span><span class="p">.</span><span class="mi">23693629</span> <span class="k">AS</span> <span class="n">mph</span><span class="p">,</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">time</span> <span class="k">AS</span> <span class="n">starttime</span><span class="p">,</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">time</span> <span class="k">AS</span> <span class="n">endtime</span>
+  <span class="k">INTO</span> <span class="n">acrt</span><span class="p">.</span><span class="n">lametrolines</span>
+  <span class="k">FROM</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span><span class="p">,</span> <span class="n">ROW_NUMBER</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">vehicle</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span> <span class="k">FROM</span> <span class="n">acrt</span><span class="p">.</span><span class="n">nextbus</span><span class="p">)</span> <span class="k">AS</span> <span class="n">loc_a</span>
+    <span class="k">JOIN</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span><span class="p">,</span> <span class="n">ROW_NUMBER</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">vehicle</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span> <span class="k">FROM</span> <span class="n">acrt</span><span class="p">.</span><span class="n">nextbus</span><span class="p">)</span> <span class="k">AS</span> <span class="n">loc_b</span>
+      <span class="k">ON</span> <span class="p">(</span><span class="n">loc_a</span><span class="p">.</span><span class="n">vehicle</span> <span class="o">=</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">vehicle</span> <span class="k">AND</span>
+        <span class="n">loc_a</span><span class="p">.</span><span class="n">route</span> <span class="o">=</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">route</span> <span class="k">AND</span>
+        <span class="n">loc_a</span><span class="p">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">direction</span> <span class="k">AND</span>
+        <span class="p">(</span><span class="n">loc_a</span><span class="p">.</span><span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">num</span><span class="p">)</span>
+ <span class="k">WHERE</span> <span class="n">loc_a</span><span class="p">.</span><span class="n">time</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">loc_b</span><span class="p">.</span><span class="n">time</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">acrt</span><span class="p">.</span><span class="n">lametrolines</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">traversal</span> <span class="n">int2</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">acrt</span><span class="p">.</span><span class="n">lametrolines</span> <span class="k">SET</span> <span class="n">traversal</span> <span class="o">=</span> <span class="k">EXTRACT</span><span class="p">(</span><span class="n">EPOCH</span> <span class="k">FROM</span> <span class="n">endtime</span> <span class="o">-</span> <span class="n">starttime</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+<p>(if you&rsquo;re not using a timestamp column for the time column in your table (older versions of avl2postgis recommended varchar(19), you&rsquo;ll want to run <a href="https://gist.github.com/1360850">this script</a> to convert them to timestamp columns).</p>
+
+<p>The trick here is the window function ROW_NUMBER, which allows us to relate each row to the next row from that same vehicle. You&rsquo;ll want to change the spatial reference from EPSG:26945 (State Plane California Zone 5) to something that is appropriate to your region. If it uses a unit other than meters, you&rsquo;ll want to also change the conversion factor (2.2 for m/s to mph).</p>
+
+<p>I added the traversal column afterwards; you could also do it in the original query. I used the traversal column (which is the time between position reports) to filter out segments in QGIS that took more than 3 minutes, so that coarse data is removed. I also filtered out segments with mph &gt; 80, since they are probably caused by GPS noise.</p>
+
+<p>I created a view that sorted by traversal descending&emdash;I believe that causes the segments with the most frequent reporting to display on top. I messed with the symbology a lot to get the maximum amount of data to display; I ended up with 20 equal-interval stops between 0 and 80 mph, and a red-yellow-blue color ramp (admittedly lifted from the Bostonography post), with saturated red at 0 mph, bright yellow around 40 mph and blue at 80 mph. Most of the map is yellow-orange since it falls between 0 and 40 mph, and the degree of redness or yellowness indicates how slow or fast it is.</p>
+
+<p>Comments or questions about how I did it or what the results were are more than welcome, either using the comments (preferably) or the contact link above.</p>
+
+<p>I then symbolized based on the mph attribute. There are all kinds of things you can do with the symbology in QGIS—vary the ramps, the classification, and many other things. Also, since it&rsquo;s just an SQL database, it would be trivial to make maps that showed, for instance, just Metro Rapid routes, &amp;c.</p>
+
+<p>The coolest thing about this map is how you can see the Orange Line (up north) and the Silver Line (extending east and south from downtown) as thick blue lines (hidden a bit by some of the other lines)&emdash;kudos to LA Metro for speeding bus service on these lines! I suspect the rail lines would show the same thing, but this map only shows bus service.</p>
+
+<p>There are a few limitations that one should be aware of when using this map. One is that there are basically two classes of service for most agencies: slower, local-stop service, and fast express service (like the Silver and Orange line in this image); there isn&rsquo;t much in between (there is Metro Rapid in LA, which somewhat bridges this gap). This means that most of any classification range won&rsquo;t be used. I can&rsquo;t wait to hear about innovative ways to solve this, but in the meantime the map still shows some neat things, and is also really pretty. In any case, I fiddled with the symbology a lot but wasn&rsquo;t really happy with the results. I think a manually defined color ramp might be the way to go eventually, with detail around 10-25mph and less detail elsewhere. I didn&rsquo;t want to change too much because I think one of the strongest things about this map is the amount of service above 40mph on the busways.</p>
+
+<p>Another issue is drawing order. There are over 300,000 line segments in this map, so some of them draw on top of each other. Deciding which are more important is difficult; I displayed the shortest time segments on top so that the best detail would be emphasized.</p>
+
+<p>A single line segment is drawn from each reported position to the next one. Positions are reported usually every 1-2 minutes, so if a bus is at a traffic light for a minute, that minute is 0 mph, while the next one might be cruising at 20 mph. A better way would be to have the speed averaged over several consecutive reports, if you were looking at specific lines, rather than chokepoints (to find chokepoints, you want the fine-grained data).</p>
+
+<p>This map only shows buses, since LA doesn&rsquo;t (yet) have real-time positions available for trains.</p>
+
+<p>Also, there seems to be a lot of green and blue around downtown LA, which seems improbable and is likely due to GPS interference. In fact, there are tinges of green on many local streets, which suggests that there are some flaws in the data.</p>
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2011/11/12/making-transit-travel-speed-maps-with-open-source-gis/">Permalink to this post</a>
+
+  <div class="vspacer5"></div>
+
+  
+  <!-- link it b/c this template is used on the home page -->
+<a href="/2011/10/29/google-maps-tile-scales/">
+  <h2>Google Maps Tile Scales</h2>
+</a>
+<p class="author">by mattwigway on October 29, 2011</p>
+
+<p>I found this buried deep in an appendix of the <a href="http://media.mapnik.org/docs/MapnikXMLDescription.pdf">Mapnik XML Schema Reference</a>, and I thought it so useful I am reposting it here:</p>
+
+<p>Zoom level Scale denominator</p>
+
+<p>0</p>
+
+<p>559,082,264</p>
+
+<p>1</p>
+
+<p>279,541,132</p>
+
+<p>2</p>
+
+<p>139,770,566</p>
+
+<p>3</p>
+
+<p>69,885,283</p>
+
+<p>4</p>
+
+<p>34,942,642</p>
+
+<p>5</p>
+
+<p>17,471,321</p>
+
+<p>6</p>
+
+<p>8,735,660</p>
+
+<p>7</p>
+
+<p>4,367,830</p>
+
+<p>8</p>
+
+<p>2,183,915</p>
+
+<p>9</p>
+
+<p>1,091,958</p>
+
+<p>10</p>
+
+<p>545,979</p>
+
+<p>11</p>
+
+<p>272,989</p>
+
+<p>12</p>
+
+<p>136,495</p>
+
+<p>13</p>
+
+<p>68,247</p>
+
+<p>14</p>
+
+<p>34,124</p>
+
+<p>15</p>
+
+<p>17,062</p>
+
+<p>16</p>
+
+<p>8,531</p>
+
+<p>17</p>
+
+<p>4,265</p>
+
+<p>18</p>
+
+<p>2,133</p>
+
+<p>19</p>
+
+<p>1,066</p>
+
+<p>20</p>
+
+<p>533</p>
+
+<p>These are used not only by Google Maps, but also by Bing Maps, OSM, CloudMade and many others, and in fact just about any Google Mercator tile source.</p>
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2011/10/29/google-maps-tile-scales/">Permalink to this post</a>
+
+  <div class="vspacer5"></div>
+
+  
+  <!-- link it b/c this template is used on the home page -->
+<a href="/2011/09/08/mapping-real-time-delays-review/">
+  <h2>Mapping Real-Time Delays: Review</h2>
+</a>
+<p class="author">by mattwigway on September 08, 2011</p>
+
+<p>Some readers may have noticed that I&rsquo;ve updated <a href="/2011/09/05/mapping-real-time-delays/">my last post</a> several times in the last few days. After thinking about the algorithms I used, I realized there were some significant issues with them. I&rsquo;ve explained them a certain amount in my updates to my previous post, but I&rsquo;d like to expand on the issues a bit here.</p>
+
+<ol>
+<li><a href="/a/2011-09-08-mapping-real-time-delays-review/stopspacing.png"><img src="/a/2011-09-08-mapping-real-time-delays-review/stopspacing.png" alt="" /></a></li>
+</ol>
+
+
+<p>Using an Inverse Distance Weighting algorithm exaggerates delays where stops are sparse by allowing them to spread over larger areas; the graphic should make this clear; if the red dots are stops with delays, one in the city center and one in a suburb, it is clear that the delays will be magnified where stops are sparse (figure 1), because there are less stops around it.</p>
+
+<ol>
+<li><p>Using an IDW layer also causes areas where there is no transit service to show data based on the nearest stops.</p></li>
+<li><p>The data from TriMet (and, it seems, perhaps other GTFS-realtime producers as well) contains data for only one or two stops on a given trip, so delays only show near where the vehicle currently is. For instance, if a delayed bus is downtown right now, chances are it will remain delayed all the way to the end of its route. This causes the red &lsquo;delayed&rsquo; spots to follow delayed buses, rather than showing all the areas where there are delays, or showing the origins of delays. This is especially true in the outer suburbs, where the average delay for a stop is often based on just one or two transit vehicles.</p></li>
+</ol>
+
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2011/09/08/mapping-real-time-delays-review/">Permalink to this post</a>
+
+  <div class="vspacer5"></div>
+
+  
+  <!-- link it b/c this template is used on the home page -->
+<a href="/2011/09/05/mapping-real-time-delays/">
+  <h2>Mapping Real-Time Delays</h2>
+</a>
+<p class="author">by mattwigway on September 05, 2011</p>
+
+<p><strong>Update 9/8/2011: I&rsquo;ve posted <a href="/2011/09/08/mapping-real-time-delays-review/">a short piece about the significant biases and issues with this visualization</a>.</strong></p>
+
+<p><a href="/a/2011-09-05-mapping-real-time-delays/idwdelay.png"><img src="/a/2011-09-05-mapping-real-time-delays/idwdelay.png" alt="" /></a></p>
+
+<p><em>TriMet delays on the evening of 9/5/2011. They cleared up the large delay east of Portland not long after I took this screenshot.</em></p>
+
+<p>GTFS-realtime was released a few weeks ago, and I thought the time was right to create a visualization of the data. This project is an OpenLayers web map (pictured at left, click for larger version) using <a href="http://openstreetmap.org">OpenStreetMap</a> data (and the <a href="http://developer.mapquest.com/web/products/open/map">MapQuest-OSM Tiles</a>), which is overlayed with a raster showing areas that are currently being affected by delays. The raster is calculated based on the average delay for every stop in TriMet&rsquo;s GTFSr feed at the time, and is rendered using <a href="http://en.wikipedia.org/wiki/Inverse_Distance_Weighting">Inverse Distance Weighting</a> to calculate the approximate delay for every location based on the delays of the nearest stops. The IDW layer is rendered on the client side using fmark&rsquo;s <a href="https://github.com/fmark/openlayers-pointvis">openlayers-pointvis</a> plugin. The data is refreshed every 30 seconds from a Postgres database, which is kept in sync with TriMet&rsquo;s servers using my aforementioned <a href="https://github.com/mattwigway/gtfsrdb">GTFSrDB</a> project.</p>
+
+<p>The raster shows green for no delays, red for delays up to 10 minutes (delays longer than 10 minutes are truncated to 10 minutes, otherwise the map looks flat in all but the worst-of-the-worst situations where vehicles are delayed 20 minutes or more. Of course, the map could be a lot more meaningful with a larger scale). Vehicles arriving up to 10 minutes early are shown in shades of blue. Delays tend to be more evident away from downtown, because they spread to cover a larger area because the stops are not as dense outside of downtown.</p>
+
+<p>Using an IDW layer brings some perils in that data is shown for areas where there is no transit service (based on delays at the nearest bus stops) and that delays appear larger where stops are sparser (because there are fewer neighbors influencing a given cell), but it creates a nice, simple, easy to understand map. I also clamped the range for arrivals to +/&ndash; 10 minutes of schedule, because otherwise the map looks flat (i.e. all green) in all but the most extreme of circumstances. The tradeoff here is not being able to differentiate a 10 minute delay from a 30 minute delay, and also having a 1 minute delay begin to show red tinges, even though the vehicle is well within the margin of error for arrivals.</p>
+
+<p>Another issue that I see with the data specifically is that it seems to tend not to provide updates for every stop, or even every timepoint, on a given trip. If an outbound trip is delayed 15 minutes downtown, it probably isn’t going to make up all of that time by the time it reaches the end of the line.</p>
+
+<p>I plan to investigate these issues and try to come up with a more accurate representation for this data as soon as possible. For now, this map should be viewed as more of a &lsquo;proof of concept&rsquo; than anything else.</p>
+
+<p>Unfortunately, I only have a screenshot to show, because I don&rsquo;t have access to a server where I can host this. But the code is all in the demo/ folder of the <a href="https://github.com/mattwigway/gtfsrdb">GTFSrDB GitHub</a>, and I&rsquo;d be happy to assist if anyone wants to deploy this on their server (for TriMet or any other agency, although I don&rsquo;t think BART would look so great thanks to the sparse stop spacing). There&rsquo;s an HTML file and a JavaScript file for the UI, and a Python CGI script to fetch the data from the database. The database URL is hardcoded into the CGI script; it&rsquo;s currently set up for Postgres. You&rsquo;ll need to load the static GTFS data using <a href="http://code.google.com/p/gtfsdb">GTFSDB</a> to the database as well, to provide the location data for bus stops.</p>
+
+
+<!-- again, b/c it's used on the home page -->
+<a href="/2011/09/05/mapping-real-time-delays/">Permalink to this post</a>
+
+  <div class="vspacer5"></div>
+
+
+<div class="paginator">
+  
+    
+      <a href="/page2" class="previous">Newer Posts</a>
+    
+  
+
+  
+    <a href="/page4" class="next">Older Posts</a>
+  
+  <div class="clear"></div>
+</div>
+
+        </div>
+        <div class="span3">
+          <div class="barbox">
+  <h3>Other Accounts</h3>
+  <ul class="linklist">
+    <li><a href="http://github.com/mattwigway">GitHub</a></li>
+    <li><a href="http://twitter.com/mattwigway">Twitter</a></li>
+  </ul>
+</div>
+
+<div class="barbox">
+  <h3>Blogroll</h3>
+  <ul class="linklist">
+    <li>
+      <a href="http://www.humantransit.org">Human Transit</a>
+    </li>
+    <li>
+      <a title="Free and Open Source GIS" href="http://underdark.wordpress.com">UnderDark</a>
+    </li>
+    <li>
+      <a href="http://transitappliance.org">Transit Appliance Development</a>
+    </li>
+    <li>
+      <a href="http://portlandtransport.org">Portland Transport</a>
+    </li>
+    <li>
+      <a href="http://thesource.metro.net">The Source&mdash;Los Angeles Metro</a>
+    </li>
+    <li>
+      <a title="The Source en Español" href="http://elpasajero.metro.net">El Pasajero&mdash;Metro de Los Angeles</a>
+    </li>
+    <li>
+      <a href="http://howweroll.trimet.org">How we Roll&mdash;Portland TriMet</a>
+    </li>
+    <li>
+      <a target="_blank" title="BRT for Silicon Valley." href="http://valleyrapid.org">Valley Rapid&mdash;VTA BRT</a>
+    </li>
+  </ul>
+</div>
+
+<div class="barbox">
+  <a href="/feed/feed.xml">New posts <img src="/img/feed.png" /></a>
+</div>
+
+        </div>
+      </div>
+
+      <div class="vspacer5"></div>
+
+      <div class="row">
+  <!-- force it center -->
+  <div class="span1">&nbsp;</div>
+  <div class="span10">
+    <p class="center">
+      <a href="/copyright">CC-BY-SA 3.0</a> by Matt Conway, 2011-2012. Created with
+      Jekyll and Bootstrap.
+    </p>
+  </div>
+</div>
+
+    </div>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
