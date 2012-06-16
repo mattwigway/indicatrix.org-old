@@ -4,6 +4,7 @@ date: '2012-04-29 16:50:50'
 layout: single-post
 slug: measuring-urban-mobility-and-accessibility-using-opentripplanner-analyst
 status: publish
+permalink: cgs2012
 title: Measuring Urban Mobility and Accessibility Using OpenTripPlanner Analyst
 wordpress_id: '328'
 ---
