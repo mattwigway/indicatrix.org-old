@@ -24,7 +24,7 @@ _By the way, it may be useful to use two separate browsers so that you can be si
  4. Click the confirmation link in the email that is sent to user B.	
  5. Go to the list of posts as user A. Click the first box to select all posts (I'm not sure if this is an issue if you have more posts than fit on one page; comments welcome).
  6. Under 'Bulk Actions' choose 'Edit', then click 'Apply'.
- 7. Change author from &emdash;No change&emdash; to the new administrator (this will make the new user the owner of all posts; if you have a multi-author blog, it'll take a little more doing and maybe some SQL trickery in the WordPress DB; as always, comments welcome). Click 'Apply'.
+ 7. Change author from --No change-- to the new administrator (this will make the new user the owner of all posts; if you have a multi-author blog, it'll take a little more doing and maybe some SQL trickery in the WordPress DB; as always, comments welcome). Click 'Apply'.
  8. If the author you are removing made any comments, you'll have to change the ownership manually. I just deleted my old comments and recommented as user B, but this will break threading on many blogs; perhaps there is another way that won't break threads. I had only made one comment anyhow.	
  9. As user A, go to [https://dashboard.wordpress.com/](https://dashboard.wordpress.com) and click My Blogs on the left. Hover over the blog you are moving, and choose 'Transfer Blog.' Check the box in the red warning. Enter user B's email (with the periods if applicable).	
  10. Open the confirm link in the email they send to user A. Make sure you do it in a browser where you are signed in as user A, not user B.	
