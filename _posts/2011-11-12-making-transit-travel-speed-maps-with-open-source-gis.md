@@ -23,7 +23,7 @@ The Internet has been abuzz the past week regarding transit speed maps. It seems
 
 Most people who have created these maps have used home-made solutions for the cartography, but I thought you should be able to do this with just stock SQL and QGIS. Using QGIS for the cartography allows you to bring in lots of useful tools, things like classification and ColorBrewer ramps.
 
-The main trick is converting the point data that is retrieved from NextBus into line data for mapping (more about the cartographic considerations of line and point data below, for now I'll focus on the technical aspects). After much whaling and gnashing of teeth, I figured out the spatial SQL to do this:
+The main trick is converting the point data that is retrieved from NextBus into line data for mapping (more about the cartographic considerations of line and point data below, for now I'll focus on the technical aspects). After several tries, I figured out the spatial SQL to do this:
 
 {% highlight sql %}
 SELECT loc_a.oid, loc_a.vehicle, loc_a.route, loc_a.direction, transform(ST_MakeLine(loc_a.the_geom, loc_b.the_geom), 26945) AS the_geom,
