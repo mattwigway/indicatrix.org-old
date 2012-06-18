@@ -17,7 +17,7 @@ tags:
 ---
 
 Update 2011-11-12 8:21 -0800: I just posted a [visualization I like better](/2011/11/12/another-la-metro-visualization/).
-[![](/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102.png)](/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102.png)
+[![](/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102-thumb.png)](/a/2011-11-12-making-transit-travel-speed-maps-with-open-source-gis/metro2011-11-102.png)
 
 The Internet has been abuzz the past week regarding transit speed maps. It seems to have been spurred by [a post on Bostongraphy](http://bostonography.com/2011/an-mbta-bus-iness-day/), which was inspired by many of the [amazing visualizations produced by Eric Fischer](http://www.flickr.com/search/?w=24431382@N03&q=nextbus), especially [this one](http://www.flickr.com/photos/walkingsf/4521616274/). Indeed, this blog has gotten a fair bit of traffic itself, because Andy Woodruff of Bostonography used my [avl2postgis](/2011/05/29/archiving-historical-data-from-nextbus/) project to retrieve the data.
 
