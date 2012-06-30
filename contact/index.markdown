@@ -1,6 +1,6 @@
 ---
 date: '2011-05-29 18:23:47'
-layout: page
+layout: standard
 slug: contact
 status: publish
 title: Contact
