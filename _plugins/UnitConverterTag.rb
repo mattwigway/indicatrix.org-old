@@ -8,7 +8,7 @@ module Indicatrix
     end
 
     def render (context)
-      return '<span class="units" title="%s">%s</span>' % [@alt, @original] 
+      return '<abbr class="units" title="%s">%s</abbr>' % [@alt, @original] 
     end
 
     # calculate the title for a given set of units
