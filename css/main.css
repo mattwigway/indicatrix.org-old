@@ -15,4 +15,4 @@ a img { border: 0px }
 /* Pygments seems to use the .mi class and so does MathJax; override in
    the MathJax context */
 
-.MathJax .mi { color: inherit }
+.MathJax .mi, .MathJax .mo { color: inherit }
