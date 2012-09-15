@@ -3,8 +3,16 @@
 .vspacer5 { height: 70px }
 /* override bootstrap, make it darker */
 a { color: #0066aa }
+
+body { color: #000000 }
+
 .previous { float: left }
 .next { float: right }
 .clear { clear: both }
 a img { border: 0px }
 .indicatrix { font-family: 'URW Bookman L', serif; font-weight: bold }
+
+/* Pygments seems to use the .mi class and so does MathJax; override in
+   the MathJax context */
+
+.MathJax .mi { color: inherit }
