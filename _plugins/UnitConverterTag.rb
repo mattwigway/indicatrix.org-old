@@ -26,10 +26,10 @@ module Indicatrix
         return (number / 1.609344).round.to_s + ' mph'
 
       elsif units == 'km' or units == 'kilometers'
-        return (number * 1.609344).round.to_s + ' mi'
+        return (number / 1.609344).round.to_s + ' mi'
 
       elsif units == 'mi' or units == 'mile' or units == 'miles'
-        return (number / 1.609344).round.to_s + ' km'
+        return (number * 1.609344).round.to_s + ' km'
 
       else
         return ''
