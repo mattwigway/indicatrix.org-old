@@ -3,8 +3,20 @@ layout: standard
 title: Home
 ---
 
+<!-- Disqus comment count -->
+<script type="text/javascript">
+    var disqus_shortname = 'indicatrix';
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
 {% for post in paginator.posts %}
   {% assign content = post.content %}
+  {% assign commentCount = true %}
   {% include post.html %}
   <div class="vspacer5"></div>
 {% endfor %}
