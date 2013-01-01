@@ -3,7 +3,7 @@ author: mattwigway
 slug: organizing-my-library
 status: draft
 layout: single-post
-title: Organizing my Library
+title: Organizing My Library
 ---
 
 My personal library of books has been growing rather quickly of late, and a few months ago I realized I need to organize it. I decided to organize my books using the [Library of Congress classification system](http://en.wikipedia.org/wiki/Library_of_Congress_classification_system). That is the system in use by most academic libraries in the United States, and it was familiar to me. I could have used the [Dewey Decimal System](http://en.wikipedia.org/wiki/Dewey_Decimal_System) as well. Library of Congress does have the advantage of covering both fiction and non-fiction. I initially learned how to do this using [this post](http://www.xml.com/pub/a/2004/04/28/lcc.html) which goes more in-depth about the physical organization of items.
