@@ -11,7 +11,7 @@ on the citation of a paper to see the abstract.
 
 * <div class="citation"><a href="#Conway201204" name="Conway201204" class="abstoggle"
   data-toggle="collapse" data-target="#Conway201204abs">Conway,
-  Matthew W. “Measuring Urban Mobility and Accessibility Using
+  Matthew Wigginton. “Measuring Urban Mobility and Accessibility Using
   OpenTripPlanner Analyst.” Poster presented at the annual meeting of
   the California Geographical Society, Davis, California, April 27–29,
   2012.</a> [http://www.indicatrix.org/cgs2012/](http://www.indicatrix.org/cgs2012/).</div>
@@ -30,5 +30,26 @@ on the citation of a paper to see the abstract.
   changes in travel time.
   </p>
   </div>
+
+* <div class="citation"> <a href="#Conway2013" name="Conway2013"
+    class="abstoggle" data-toggle="collapse"
+    data-target="#Conway2013abs"> Conway, Matthew
+    Wigginton. 2013. “Cyberspace Classrooms and E-Professors: One
+    Laptop Learner Considers the Merits and Downfalls of Online
+    Classes.” _Daily Nexus_, March 5.</a>
+    [http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf](http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf).</div>
+    <div id="Conway2013abs" class="collapse abstract"> <p> This
+    article argues that some of the university class can be
+    productively moved online, while some cannot. In particular, it
+    argues that lectures work very well online, but expresses concern
+    that other parts of the university experience are lost. It argues
+    that unstructured time between students and professors is critical
+    to creating a community of scholars, but that this can easily be
+    lost in the online environment. It also gives suggestions about
+    how to structure and present online lecture material.
+    <br/>
+    _Copyright &copy; 2013 by the Daily Nexus. Used with permission._
+    </p>
+    </div>
 
 </div>
