@@ -16,3 +16,11 @@ a img { border: 0px }
    the MathJax context */
 
 .MathJax .mi, .MathJax .mo { color: inherit }
+
+/* Styles for the publications page */
+/* these shouldn't look like links */
+a.abstoggle { color: #000; }
+.citations > ul > li { border: 1px solid #ccc; border-radius: 8px; padding: 8px; }
+.citation { margin-left: 2em; text-indent: -2em; }
+.abstract { margin-left: 2em }
+.abstract > p { padding-top: 12pt; }
