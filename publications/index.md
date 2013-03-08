@@ -1,11 +1,12 @@
 ---
 layout: standard
-title: Publications
+title: Publications and Presentations
 ---
 
-My publications, listed in reverse-chronological order. Also available
-in [BibTeX](matt_conway.bib) or [RIS](matt_conway.ris) format. Click
-on the citation of a paper to see the abstract.
+My publications and presentations, listed in reverse-chronological
+order. Also available in [BibTeX](/publications/matt_conway.bib) or
+[RIS](/publications/matt_conway.ris) format. Click on the citation of
+a paper to see the abstract.
 
 <div class="citations">
 
