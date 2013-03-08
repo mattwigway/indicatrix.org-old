@@ -24,3 +24,6 @@ a.abstoggle { color: #000; }
 .citation { margin-left: 2em; text-indent: -2em; }
 .abstract { margin-left: 2em }
 .abstract > p { padding-top: 12pt; }
+
+/* http://webaim.org/techniques/css/invisiblecontent/ */
+.hidden508 { position: absolute; width: 1px; height: 1px; overflow: hidden }
