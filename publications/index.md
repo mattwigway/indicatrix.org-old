@@ -42,7 +42,7 @@ on the citation of a paper to see the abstract.
     article argues that some of the university class can be
     productively moved online, while some cannot. In particular, it
     argues that lectures work very well online, but expresses concern
-    that other parts of the university experience are lost. It argues
+    that other parts of the university experience do not. It argues
     that unstructured time between students and professors is critical
     to creating a community of scholars, but that this can easily be
     lost in the online environment. It also gives suggestions about
