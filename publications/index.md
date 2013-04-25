@@ -8,7 +8,50 @@ order. Also available in [BibTeX](/publications/matt_conway.bib) or
 [RIS](/publications/matt_conway.ris) format. Click on the citation of
 a paper to see the abstract.
 
+I don't really like reading other people's slides, but some people do so I include slides here. As always, if you have questions or comments about anything please [contact me!](/contact).
+
 <div class="citations">
+
+
+* <div class="citation"> <a href="#Conway201304" name="Conway201304"
+    class="abstoggle" data-toggle="collapse"
+    data-target="#Conway201304abs">Conway, Matthew Wigginton. “The
+    Death and Life of Great Global Cities: Jane Jacobs and Global
+    Cities Theory.” Paper presented at the annual meeting of the
+    California Geographical Society, San Luis Obispo, California,
+    April 27–29, 2013. </a> [http://www.indicatrix.org/publications/2013/Conway-Jacobs-slides.pdf](http://www.indicatrix.org/publications/2013/Conway-Jacobs-slides.pdf).</div>
+    <div id="Conway201304abs" class="collapse abstract"> <p> Jane
+    Jacobs, the noted author of _The Death and Life of Great American
+    Cities_, advanced many ideas that can be seen as
+    iconoclastic. However, these ideas are in many cases very similar
+    to the ideas of another important vein of scholarship, the the
+    global cities hypothesis, which examines the role of cities in
+    globalization. Jacobs's ideas and the ideas of the global cities
+    scholars are largely constructed independently. This article
+    examines the connections between the two. It works systematically,
+    starting with small-scale phenomena and progressing to comments on
+    global-scale phenomena.  <br/> </p> </div>
+
+* <div class="citation"> <a href="#Conway2013" name="Conway2013"
+    class="abstoggle" data-toggle="collapse"
+    data-target="#Conway2013abs"> Conway, Matthew
+    Wigginton. 2013. “Cyberspace Classrooms and E-Professors: One
+    Laptop Learner Considers the Merits and Downfalls of Online
+    Classes.” _Daily Nexus_, March 5.</a>
+    [http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf](http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf).</div>
+    <div id="Conway2013abs" class="collapse abstract"> <p> This
+    article argues that some of the university class can be
+    productively moved online, while some cannot. In particular, it
+    argues that lectures work very well online, but expresses concern
+    that other parts of the university experience do not. It argues
+    that unstructured time between students and professors is critical
+    to creating a community of scholars, but that this can easily be
+    lost in the online environment. It also gives suggestions about
+    how to structure and present online lecture material.
+    <br/>
+    _Copyright &copy; 2013 by the Daily Nexus. Used with permission._
+    </p>
+    </div>
 
 * <div class="citation"><a href="#Conway201204" name="Conway201204" class="abstoggle"
   data-toggle="collapse" data-target="#Conway201204abs">Conway,
@@ -31,26 +74,5 @@ a paper to see the abstract.
   changes in travel time.
   </p>
   </div>
-
-* <div class="citation"> <a href="#Conway2013" name="Conway2013"
-    class="abstoggle" data-toggle="collapse"
-    data-target="#Conway2013abs"> Conway, Matthew
-    Wigginton. 2013. “Cyberspace Classrooms and E-Professors: One
-    Laptop Learner Considers the Merits and Downfalls of Online
-    Classes.” _Daily Nexus_, March 5.</a>
-    [http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf](http://www.indicatrix.org/publications/2013/Conway-Online-Classes-DailyNexus.pdf).</div>
-    <div id="Conway2013abs" class="collapse abstract"> <p> This
-    article argues that some of the university class can be
-    productively moved online, while some cannot. In particular, it
-    argues that lectures work very well online, but expresses concern
-    that other parts of the university experience do not. It argues
-    that unstructured time between students and professors is critical
-    to creating a community of scholars, but that this can easily be
-    lost in the online environment. It also gives suggestions about
-    how to structure and present online lecture material.
-    <br/>
-    _Copyright &copy; 2013 by the Daily Nexus. Used with permission._
-    </p>
-    </div>
 
 </div>
