@@ -27,3 +27,6 @@ a.abstoggle { color: #000; }
 
 /* http://webaim.org/techniques/css/invisiblecontent/ */
 .hidden508 { position: absolute; width: 1px; height: 1px; overflow: hidden }
+
+/* figures */
+figcaption { text-style: italic }
