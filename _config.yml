@@ -4,5 +4,9 @@ permalink: pretty
 markdown: pandoc
 lsi: true
 pandoc:
-  extensions: [smart, mathjax]
+  extensions:
+        - smart
+        - mathjax
+        - csl: '/home/matthewc/.csl/chicago-author-date.csl'
+        - bibliography: '/home/matthewc/texmf/bibtex/bib/Microaccessibility.bib'
 exclude: [Makefile]
