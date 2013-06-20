@@ -29,6 +29,6 @@ a.abstoggle { color: #000; }
 .hidden508 { position: absolute; width: 1px; height: 1px; overflow: hidden }
 
 /* figures */
-figcaption { text-style: italic }
+figcaption { font-style: italic }
 
-.boilerplate { text-style: italic }
+.boilerplate { font-style: italic }
