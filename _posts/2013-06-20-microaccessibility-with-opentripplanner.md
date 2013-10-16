@@ -103,7 +103,7 @@ For a more in-depth treatment, see [the full report](/publications/2013/Conway-A
 Special thanks to Dr. Konstadinos Goulias and Jae Lee in the
 <a href="http://www.geog.ucsb.edu/geotrans/">GeoTrans lab</a> at UCSB, and to
 Bryan Karaffa in the
-<a href="http://geog.ucsb.edu">UCSB Department of Geography</a>
+<a href="http://geog.ucsb.edu">UCSB Department of Geography</a>.
 
 Map data © <a href="http://www.openstreetmap.org">OpenStreetMap</a>
 contributors. Eatery data ©
