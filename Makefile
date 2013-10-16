@@ -8,4 +8,4 @@ fast:
 
 deploy:
 	rm -rf ../blog_site/*
-	cp -ar _site/* ../blog_site
+	cp -ar build/* ../blog_site
