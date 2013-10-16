@@ -18,7 +18,7 @@ and temporal. The study area is the
 I analyzed accessibility at every hour of a typical week, so that
 accessibility can be compared at different times of day and on
 different days. This has been done before, looking at
-[accessibility at different times of day](www.scag.ca.gov/modeling/pdf/ABM/ABMreport01_Overview.pdf#page=8)
+[accessibility at different times of day](http://www.scag.ca.gov/modeling/pdf/ABM/ABMreport01_Overview.pdf#page=8)
 (page 8) in the Los Angeles area. I used tighter temporal scales (one
 hour instead of four chunks) and also analyzed accessibility over the
 entire week to allow the discernment of weekly cycles.
