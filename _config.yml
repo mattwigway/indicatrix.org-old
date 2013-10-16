@@ -1,12 +1,8 @@
 paginate: 5
 pygments: true
 permalink: pretty
-markdown: pandoc
+markdown: rdiscount
 lsi: true
-pandoc:
-  extensions:
-        - smart
-        - mathjax
-        - csl: '/home/matthewc/.csl/chicago-author-date.csl'
-        - bibliography: '/home/matthewc/texmf/bibtex/bib/Microaccessibility.bib'
+rdiscount:
+  extensions: [smart]
 exclude: [Makefile]
