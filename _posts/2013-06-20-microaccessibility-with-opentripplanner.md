@@ -101,13 +101,13 @@ For a more in-depth treatment, see [the full report](/publications/2013/Conway-A
 <div class="boilerplate">
 
 Special thanks to Dr. Konstadinos Goulias and Jae Lee in the
-[GeoTrans lab](http://www.geog.ucsb.edu/geotrans/) at UCSB, and to
+<a href="http://www.geog.ucsb.edu/geotrans/">GeoTrans lab</a> at UCSB, and to
 Bryan Karaffa in the
-[UCSB Department of Geography](http://geog.ucsb.edu).
+<a href="http://geog.ucsb.edu">UCSB Department of Geography</a>
 
-Map data © [OpenStreetMap](http://www.openstreetmap.org)
+Map data © <a href="http://www.openstreetmap.org">OpenStreetMap</a>
 contributors. Eatery data ©
-[UCSB Interactive Campus Map](http://map.geog.ucsb.edu).
+<a href="http://map.geog.ucsb.edu">UCSB Interactive Campus Map</a>.
 
 These maps and analyses are the result of a research project and
 should not be used for decision support without additional consultation.
