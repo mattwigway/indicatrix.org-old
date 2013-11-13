@@ -48,7 +48,7 @@ data. Acessibility was analyzed for both walking and cycling.
   src="https://www.youtube-nocookie.com/embed/PTEvVajxdbc?rel=0"
   frameborder="0" allowfullscreen="yes"></iframe>
   <figcaption>Accessibility to eateries at different times of day by
-  walking</figcaption>
+  bicycling</figcaption>
 </figure>
 
 The two animated maps show the accessibility to eateries at different
