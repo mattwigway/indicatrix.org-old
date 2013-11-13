@@ -3,7 +3,7 @@ layout: standard
 title: About Me
 ---
 
-<img class="pull-left well" src="/img/headshot.jpg" style="padding: 12px" />
+<img class="pull-left" src="/img/headshot.jpg" style="padding: 12px" />
 
 I'm a [Geography](http://geog.ucsb.edu) student at the [University of California, Santa Barbara](http://www.ucsb.edu). My interests lie in transportation, and public transport in particular. I am especially interested in computational modeling and analysis of transportation networks.
 
