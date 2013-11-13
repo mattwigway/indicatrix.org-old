@@ -20,9 +20,10 @@ a img { border: 0px }
 /* Styles for the publications page */
 /* these shouldn't look like links */
 a.abstoggle { color: #000; }
-.citations > ul > li { border: 1px solid #ccc; border-radius: 8px; padding: 8px; }
+.citations { list-style-type: none }
+.citations > li { border: 1px solid #ccc; border-radius: 8px; padding: 8px; }
 .citation { margin-left: 2em; text-indent: -2em; }
-.abstract { margin-left: 2em }
+.abstract { margin-left: 2em; display: block }
 .abstract > p { padding-top: 12pt; }
 
 /* http://webaim.org/techniques/css/invisiblecontent/ */
