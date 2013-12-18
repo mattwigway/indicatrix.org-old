@@ -39,7 +39,7 @@ SELECT loc_a.oid, loc_a.vehicle, loc_a.route, loc_a.direction, transform(ST_Make
         loc_a.route = loc_b.route AND
         loc_a.direction = loc_b.direction AND
         (loc_a.num + 1) = loc_b.num)
- WHERE loc_a.time &lt;&gt; loc_b.time;
+ WHERE loc_a.time <> loc_b.time;
 ALTER TABLE acrt.lametrolines ADD COLUMN traversal int2;
 UPDATE acrt.lametrolines SET traversal = EXTRACT(EPOCH FROM endtime - starttime);
 {% endhighlight %}
