@@ -1,11 +1,3 @@
-TY  - GEN
-T1  - Measuring Urban Mobility and Accessibility Using OpenTripPlanner Analyst
-A1  - Conway, Matthew Wigginton
-Y1  - 2012///
-PB  - Poster presented at the annual meeting of the California Geographical Society, Davis, California, April 27–29
-UR  - http://www.indicatrix.org/cgs2012/
-N2  - Measures of urban mobility and accessibility are useful in many situations, from real estate to urban planning. Some methods of measuring and visualizing mobility and accessibility include making travel-time isochrones, measuring travel time effects of network changes, measuring accessibility using opportunity data, and creating time-space prisms. Transit, walking and cycling are more important to mobility than driving in many urban areas. This poster examines how the open-source OpenTripPlanner Analyst software can be used in conjunction with open transit agency and street network data to create visualizations of multimodal mobility, accessibility and changes in travel time.
-ER  - 
 TY  - NEWS
 T1  - Cyberspace Classrooms and E-Professors: One Laptop Learner Considers the Merits and Downfalls of Online Classes
 A1  - Conway, Matthew Wigginton
@@ -24,4 +16,28 @@ Y1  - 2013///
 PB  - Paper presented at the annual meeting of the California Geographical Society, San Luis Obispo, California, April 27–29
 UR  - http://www.indicatrix.org/publications/2013/Conway-Jacobs-slides.pdf
 N2  - Jane Jacobs, the noted author of _The Death and Life of Great American Cities_, advanced many ideas that can be seen as iconoclastic. However, these ideas are in many cases very similar to the ideas of another important vein of scholarship, the the global cities hypothesis, which examines the role of cities in globalization. Jacobs's ideas and the ideas of the global cities scholars are largely constructed independently. This article examines the connections between the two. It works systematically, starting with small-scale phenomena and progressing to comments on global-scale phenomena.
+ER  - 
+TY  - MPCT
+T1  - Another Fine Mess
+A1  - Conway, Matthew Wigginton
+Y1  - 2007///
+PB  - Film presented at the Greenlight Earth Day Film Festival, Palo Alto, CA
+UR  - http://www.indicatrix.org/greenlight#anotherfinemess
+N2  - This film is about construction and demolition waste management. It won second place in the 2007 Greenlight Earth Day Film Festival.
+ER  - 
+TY  - MPCT
+T1  - Rain Check
+A1  - Conway, Matthew Wigginton
+Y1  - 2009///
+PB  - Film presented at the Greenlight Earth Day Film Festival, Palo Alto, CA
+UR  - http://www.indicatrix.org/greenlight#raincheck
+N2  - This film is about stormwater management and retention, covering topics such as rain barrels and permeable pavement. It was a finalist at the 2009 Greenlight Earth Day Film Festival.
+ER  - 
+TY  - GEN
+T1  - Measuring Urban Mobility and Accessibility Using OpenTripPlanner Analyst
+A1  - Conway, Matthew Wigginton
+Y1  - 2012///
+PB  - Poster presented at the annual meeting of the California Geographical Society, Davis, California, April 27–29
+UR  - http://www.indicatrix.org/cgs2012/
+N2  - Measures of urban mobility and accessibility are useful in many situations, from real estate to urban planning. Some methods of measuring and visualizing mobility and accessibility include making travel-time isochrones, measuring travel time effects of network changes, measuring accessibility using opportunity data, and creating time-space prisms. Transit, walking and cycling are more important to mobility than driving in many urban areas. This poster examines how the open-source OpenTripPlanner Analyst software can be used in conjunction with open transit agency and street network data to create visualizations of multimodal mobility, accessibility and changes in travel time.
 ER  - 

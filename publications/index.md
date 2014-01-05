@@ -8,7 +8,7 @@ order. Also available in [BibTeX](/publications/matt_conway.bib) or
 [RIS](/publications/matt_conway.ris) format. Click on the citation of
 a paper to see the abstract.
 
-I don't really like reading other people's slides, but some people do so I include slides here. As always, if you have questions or comments about anything please [contact me!](/contact).
+I don't really like reading other people's slides, but some people do so I include slides here. As always, if you have questions or comments about anything please [contact me](/contact)!
 
 <ul class="citations">
 
@@ -74,5 +74,19 @@ examines how the open-source OpenTripPlanner Analyst software can be
 used in conjunction with open transit agency and street network data
 to create visualizations of multimodal mobility, accessibility and
 changes in travel time.</div> </li>
+
+<li>
+<div class="citation"><a href="#Conway2009" name="Conway2009" class="abstoggle" data-toggle="collapse" data-target="#Conway2009abs">Conway, Matthew Wigginton. 2009. &ldquo;Rain Check.&rdquo; Film presented at the Greenlight Earth Day Film Festival, Palo Alto, CA.</a><a href="http://www.indicatrix.org/greenlight#raincheck">http://www.indicatrix.org/greenlight#raincheck</a>.</div>
+<div id="Conway2009abs" class="collapse abstract">
+This film is about stormwater management and retention, covering topics such as rain barrels and permeable pavement. It was a finalist at the 2009 Greenlight Earth Day Film Festival.
+</div>
+</li>
+
+<li>
+<div class="citation"><a href="#Conway2007" name="Conway2007" class="abstoggle" data-toggle="collapse" data-target="#Conway2007abs">Conway, Matthew Wigginton. 2007. &ldquo;Another Fine Mess.&rdquo; Film presented at the Greenlight Earth Day Film Festival, Palo Alto, CA.</a><a href="http://www.indicatrix.org/greenlight#anotherfinemess">http://www.indicatrix.org/greenlight#anotherfinemess</a>.</div>
+<div id="Conway2007abs" class="collapse abstract">
+This film is about construction and demolition waste management. It won second place in the 2007 Greenlight Earth Day Film Festival.
+</div>
+</li>
 
 </ul>

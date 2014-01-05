@@ -4,7 +4,9 @@
 /* override bootstrap, make it darker */
 a { color: #0066aa }
 
-body { color: #000000 }
+body { color: #000000; }
+
+p { text-align: justify }
 
 .previous { float: left }
 .next { float: right }
