@@ -8,6 +8,8 @@ title: Schelling's Segregation Model in JavaScript
 
 <a href="/segregation.js"><img class="pull-left" src="/img/2013/12/28/schellings-segregation-model-js/schelling.png" /></a>
 
+<div class="clear"></div>
+
 [Schelling's segregation model](https://class.coursera.org/modelthinking/lecture/16) is an interesting model of neighborhood dynamics developed by the economist Thomas C. Schelling. It's an agent based model, in which agents of two groups (which could be based on income, political affiliation, race, &c.) are placed on a grid. There is some threshold for what percentage of an agent's neighbors must be of the same group for it to be happy. For instance, agents might want 30% of their neighbors to be of the same group. If they are not happy, they move. This continues until all agents are happy.
 
 What's interesting about the model is that relatively low thresholds for individuals (e.g. 30%) end up leading to extreme segregation in the aggregate (Indeed, Schelling's book is called _Micromotives and Macrobehavior_). This segregation can be easily seen in the above screenshot: the tolerance is set at 30%, but on average 77% of each agents neighbors are of the same group.
