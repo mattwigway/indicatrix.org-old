@@ -35,3 +35,22 @@ a.abstoggle { color: #000; }
 figcaption { font-style: italic }
 
 .boilerplate { font-style: italic }
+
+/* header */
+.header {
+    background-image: url(/img/header_bg.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 163px;
+    margin-top: 41px;
+    margin-bottom: 15px;
+}
+
+.header .container {
+    height: 163px;
+}
+
+.header img {
+    position: relative;
+    top: 55px;
+}
