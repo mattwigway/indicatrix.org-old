@@ -1,10 +1,10 @@
 all: site deploy
 
 site:
-	jekyll build
+	jekyll
 
 fast:
-	jekyll build --no-lsi
+	jekyll --no-lsi
 
 deploy:
 	rm -rf ../blog_site/*
