@@ -5,7 +5,7 @@ layout: single-post
 ---
 
 <figure>
-  <img src="/img/2014/03/26/pandemic_board.jpg" />
+  <img src="/img/2014/03/26/pandemic_board.jpg" /><br/>
   <caption>The _Pandemic_ board, 2nd ed. Copyright &copy; 2012 Z-Man Games</caption>
 </figure>
 
