@@ -79,13 +79,11 @@ accessibility measures and inflexible statistical techniques seems
 promising.
 
 For a more in-depth treatment, see
-[the full paper](/publications/2014/Conway-Bikeshare-Popularity.pdf). The
-[slides](/publications/2014/Conway-Bikeshare-Popularity-slides.pdf)
+[the full paper](/publications/2014/Conway-Bikeshare-Accessibility.pdf). The
+[slides](/publications/2014/Conway-Bikeshare-Accessibility-slides.pdf)
 from the conference presentation are available as well. I
 would like to thank
 [Kostas Goulias](http://www.geog.ucsb.edu/people/faculty/kostas-goulias.html) in the
-[UCSB Department of Geography](http://geog.ucsb.edu) for their
-assistance with this and a previous bikeshare-related project,
-respectively. I would also like to thank
+[UCSB Department of Geography](http://geog.ucsb.edu) for his help with this project. I would also like to thank
 [Eric Fischer](https://www.flickr.com/photos/walkingsf) for his
-assistance with bikeshare data. Any errors that remain are, of course, mine.
+assistance with San Francisco bikeshare data. Any errors that remain are, of course, mine.
