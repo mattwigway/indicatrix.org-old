@@ -87,3 +87,12 @@ would like to thank
 [UCSB Department of Geography](http://geog.ucsb.edu) for his help with this project. I would also like to thank
 [Eric Fischer](https://www.flickr.com/photos/walkingsf) for his
 assistance with San Francisco bikeshare data. Any errors that remain are, of course, mine.
+
+_Update (May 4, 2014)_: I uploaded a new copy of the paper with a few corrections:
+
+- I added a note about OpenTripPlanner as beta software (p. 4)
+- I added a note about the units of the accessibility variables (p. 8)
+- I added a description of the coefficients of the fit model (p. 8)
+- I added a footnote about sampling (p. 8f)
+- I added a note about how the San Francisco linear model has been flattened (p. 13)
+- I added legends to maps that were missing them (pp. 16-21)
