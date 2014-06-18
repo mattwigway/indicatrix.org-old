@@ -5,7 +5,10 @@ title: About Me
 
 <img class="pull-left" src="/img/headshot.jpg" style="padding: 12px" />
 
-I'm a [Geography](http://geog.ucsb.edu) student at the [University of California, Santa Barbara](http://www.ucsb.edu). My interests lie in transportation, and public transport in particular. I am especially interested in computational modeling and analysis of transportation networks.
+I'm currently a fellow in the [Data Science for Social Good program](http://dssg.io) at the [University of Chicago](http://uchicago.edu).
+I'm working predicting the effects of municipal investments on propoerty values.
+
+I hold a BA in [Geography](http://geog.ucsb.edu) from the [University of California, Santa Barbara](http://www.ucsb.edu). My interests lie in transportation, and public transport in particular. I am especially interested in computational modeling and analysis of transportation networks.
 
 I am a developer on the [OpenTripPlanner project](http://www.opentripplanner.org), a tool for trip planning and transit network analysis; I've used it in [several](/2013/06/20/microaccessibility-with-opentripplanner/) [research](/cgs2012/) [projects](http://www.indicatrix.org/2012/09/15/a-simple-model-of-automobile-travel-time/). This open-source tool allows calculation of accessibility measures, which can be used to evaluate land-use and transportation network changes.
 
