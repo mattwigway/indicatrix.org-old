@@ -7,5 +7,4 @@ fast:
 	jekyll --no-lsi
 
 deploy:
-	rm -rf ../blog_site/*
-	cp -ar _site/* ../blog_site
+	rsync -r _site/ mattwigway_indicatrix@ssh.phx.nearlyfreespeech.net:
