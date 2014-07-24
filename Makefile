@@ -1,10 +1,10 @@
 all: site deploy
 
 site:
-	jekyll
+	jekyll build
 
 fast:
-	jekyll --no-lsi
+	jekyll build --no-lsi
 
 deploy:
 	rsync -r _site/ mattwigway_indicatrix@ssh.phx.nearlyfreespeech.net:
