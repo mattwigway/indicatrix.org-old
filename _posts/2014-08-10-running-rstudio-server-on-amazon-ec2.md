@@ -32,7 +32,7 @@ Here's how to do it.
    log into RStudio.
 8. On your local machine, run `ssh -N -L localhost:8787:localhost:8787 -i ~/.ssh/aws2.pem ubuntu@<aws-ip>`. This forwards the RStudio Server session securely to your computer using SSH tunneling.
    Note that any user of your local machine can now access RStudio Server, although they'll need the password you created in step 7.
-9. Go to [http://localhost:8787/] and log in with the password you just created.
+9. Go to [http://localhost:8787/](http://localhost:8787/) and log in with the password you just created.
 10. Analyze away.
 
 Note that you are just accessing RStudio on AWS, so you'll need to have all of your data and R scripts on the server.
