@@ -4,7 +4,7 @@ layout: single-post
 title: Running RStudio Server on Amazon EC2
 ---
 
-<img src="/img/2014/08/10/rstudio_server.png" alt="RStudio Server running on Amazon AWS, accessed via SSH tunneling">
+<img src="/img/2014/08/rstudio_server.png" alt="RStudio Server running on Amazon AWS, accessed via SSH tunneling">
 
 [R](http://www.r-project.org) is a great environment for statistical computing; I've used it in
 a [number](/2014/05/01/predicting-the-popularity-of-bicycle-sharing-stations/) [of](/2014/04/24/bikeshare-clustering/)
