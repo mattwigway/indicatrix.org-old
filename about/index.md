@@ -15,3 +15,7 @@ I am a developer on the [OpenTripPlanner project](http://www.opentripplanner.org
 I also have on-the-ground experience with public transportation operations; I worked in the Service Planning department of [San Francisco Muni](http://www.sfmta.com) during the summer of 2013. At Muni, I worked on diverse projects including intersection reconfiguration for transit efficiency and traffic signal design for a Bus Rapid Transit line.
 
 I can be reached by email at [matt@indicatrix.org](mailto:matt@indicatrix.org).
+
+I've lived and worked in a number of cities, which are displayed below.
+
+<div class="map" style="width: 800px; height: 600px" data-lat="38" data-lon="-97" data-zoom="4" data-geojson="places.geojson" data-popup="<h2>%(name)s</h2>%(desc)s"></div>
