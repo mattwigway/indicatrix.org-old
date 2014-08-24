@@ -96,3 +96,5 @@ _Update (May 4, 2014)_: I uploaded a new copy of the paper with a few correction
 - I added a footnote about sampling (p. 8f)
 - I added a note about how the San Francisco linear model has been flattened (p. 13)
 - I added legends to maps that were missing them (pp. 16-21)
+
+_Update (August 24, 2014)_: The San Francisco accessibility measures were incorrectly calculated using California State Plane Zone 5 instead of Zone 3 projection. It is not believed that this introduced a significant amount of error, in relation to other sources of error such as geographic aggregation by centroid.
