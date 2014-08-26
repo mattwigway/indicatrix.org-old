@@ -11,7 +11,7 @@ layout: single-post
 
 I like board games, and one of my favorites is [_Pandemic_](http://en.wikipedia.org/wiki/Pandemic_%28board_game%29). The game consists of a board (pictured above) with a world map on it, with various cities highlighted, and a network between the cities. Disease breaks out randomly in the cities at the start of the game (using the shuffled infection deck) and then progresses using the same deck. Players cooperatively attempt to quell disease by moving between cities and treating disease. On each turn, players draw city cards; by collecting five of a particular color, they can cure a disease. Additional cards are drawn each turn from the infection deck to infect additional cities. Periodically, there are 'epidemics' in which the cards for the cities that have already been drawn are returned to the top of the infection deck. If a city is infected three times without being treated, and there is an additional infection, an 'outbreak' occurs and all of the cities connected to that city are infected.
 
-The network is a major component of gameplay, so it seemed like network theory would be able to shed some light on a strategy for the game. I digitized the network from the game board using [Gephi](http://www.gephi.org). I then calculated the [Eigenvector centrality](http://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality) and [degree](http://en.wikipedia.org/wiki/Degree_%28graph_theory%29) for each city using [NetworkX](http://networkx.github.io/).
+The network is a major component of gameplay, so it seemed like network theory would be able to shed some light on a strategy for the game. I digitized the network from the game board using [Gephi](http://www.gephi.org). I then calculated the [Eigenvector centrality](http://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality) and [degree](http://en.wikipedia.org/wiki/Degree_%28graph_theory%29) for each city using [NetworkX](http://networkx.github.io/). A machine-readable graph is [available for download](/download/pandemic.graphml).
 
 Both degree and Eigenvector centrality are measures of centrality, that is how central a node is in the network. Degree is the simpler of the two; it is the number of connections (edges) each city (node) has. For example, Santiago is connected to only one city (Lima), so it has degree 1. Chicago is connected to five other cities (San Francisco, Los Angeles, Mexico City, Atlanta, and Montréal), so it has degree 5. The more other places a city is connected to, the theory goes, the more important it is.
 
@@ -34,7 +34,7 @@ Realistically, these measures of centrality don't determine the absolute best st
 
 One interesting pattern in the centralities is that Asian cities have very high centralities, while cities in the global South are much less central. This suggests that disease can spread much more rapidly in the Asian cities (although this is somewhat counterbalanced by increased ability to reach the Asian cities from each other). Gameplay is very different when focused on the Asian cities than when focused on the global South. I have noticed this in gameplay (infections in the South don't seem to cause as much trouble as other infections, though this is admittedly anecdotal). The centralities provide some theoretical justification for this observation.
 
-One further analysis that could be undertaken would be to treat all research-station-to-research-station links as additional edges in the network, and determine which combinations of cities reduce the average shortest path distance between all pairs of nodes.
+One further analysis that could be undertaken would be to treat all research station-to-research station links as additional edges in the network, and determine which combinations of cities reduce the average shortest path distance between all pairs of nodes.
 
 And finally, the centralities:
 
@@ -90,4 +90,3 @@ And finally, the centralities:
 <tr><td>Johannesburg</td><td>0.015</td><td>2</td></tr>
 <tr><td>Santiago</td><td>0.006</td><td>1</td></tr>
 </tbody></table>
-
