@@ -13,6 +13,29 @@ I don't really like reading other people's slides, but some people do so I inclu
 <ul class="citations">
 
 <li>
+<div class="citation"><a href="#Conway201405" name="Conway201405"
+    class="abstoggle" data-toggle="collapse"
+    data-target="#Conway201405abs">Conway, Matthew Wigginton. “Predicting the Popularity of Bicycle Sharing Stations: An Accessibility-Based Approach Using Linear
+Regression and Random Forests” Paper presented at the annual meeting of the
+    California Geographical Society, Los Angeles, California, May 2--4. </a> <a
+    href="http://www.indicatrix.org/publications/2014/Conway-Bikeshare-Accessibility.pdf">http://www.indicatrix.org/publications/2014/Conway-Bikeshare-Accessibility.pdf</a>.</div>
+    <div id="Conway201405abs" class="collapse abstract">Bikesharing systems have been growing quickly of late. They
+consist of stations distributed throughout a city where one can check out a
+bike for short trips. Some stations are more popular than others. This
+project develops statistical models to predict station popularity based on the
+accessibility of stations to jobs and housing. Linear regression and random
+forest regression are employed. The models are then transferred to other
+systems to evaluate their efficacy as planning tools for new systems.
+Models do not predict as well as might have been hoped, nor is there any
+one model that performs uniformly well in all cities. Spatial autocorrelation
+is present both in the popularities and the residuals from most of the
+models, indicating that spatial effects (such as accessibility) have not been
+fully explained.</div>
+    </li>
+
+
+<li>
+
 <div class="citation"><a href="#Conway201304" name="Conway201304"
     class="abstoggle" data-toggle="collapse"
     data-target="#Conway201304abs">Conway, Matthew Wigginton. “The
