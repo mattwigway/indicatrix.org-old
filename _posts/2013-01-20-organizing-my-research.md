@@ -6,7 +6,7 @@ status: publish
 title: Organizing my Research
 ---
 
-As a follow-up to [my recent post about organizing my library]({% post_url 2012-12-31-organizing-my-library %}), this post talks about the system I've come up with for organizing my research.
+As a follow-up to [my recent post about organizing my library](/2012/12/31/organizing-my-library), this post talks about the system I've come up with for organizing my research.
 
 I was starting a new research project, and I realized that writing my bibliography and managing my citations manually wasn't going to be good enough. I needed a reference manager of some sort. My librarian suggested I try [Mendeley](http://www.mendeley.com/), and it has become the core of my reference-management workflow.
 
