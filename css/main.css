@@ -28,9 +28,6 @@ a.abstoggle { color: #000; }
 .abstract { margin-left: 2em; display: block }
 .abstract > p { padding-top: 12pt; }
 
-/* http://webaim.org/techniques/css/invisiblecontent/ */
-.hidden508 { position: absolute; width: 1px; height: 1px; overflow: hidden }
-
 /* figures */
 figcaption { font-style: italic }
 
@@ -39,7 +36,7 @@ figcaption { font-style: italic }
 /* header */
 .header {
     background-image: url(/img/header_bg.jpg);
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     height: 163px;
     margin-top: 41px;
