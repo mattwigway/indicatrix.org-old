@@ -38,7 +38,7 @@ of how analysis is done in OTP and the creation of many useful components.
 
 In some personal projects, I needed to be able to run batch jobs again, and I decided to try to build a quick and dirty
 Python library to call the OTP analysis functions. (To be fair, integrating OTP and Python was originally proposed by
-  Tuuka Hastrup in the aforementioned thread). The result is
+  Tuukka Hastrup in the aforementioned thread). The result is
 [here](https://www.github.com/mattwigway/opentripplanner-jython). It's a [Jython](http://www.jython.org/) library
 that wraps up the functionality of OTP's analysis functions in a hacker-friendly library. I decided to take a simple
 approach and build a library that does one thing and one thing well: creates origin-destination matrices. What you
