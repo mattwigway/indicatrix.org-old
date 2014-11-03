@@ -8,4 +8,4 @@ I have a situation where I have multiple GeoTools applications being run on a se
 
 It turns out the issue was that the `gt-epsg-hsql` extracts its hsql database of projections to `Geotools` in the system temporary directory, and if there are multiple geotools apps running as different users, the first one to start gets the directory, and the remaining ones crash because they don't have permissions to access it.
 
-The workaround is to use separate temporary directories for each user. The easy way to do this is `TMPDIR=`mktemp -d` application`, which creates a new unique temporary directory each time an application is started.
+The workaround is to use separate temporary directories for each user. The easy way to do this is <code>TMPDIR=&#96;mktemp -d&#96; application</code>, which creates a new unique temporary directory each time an application is started.

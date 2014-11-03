@@ -25,8 +25,8 @@ Here's how to do it.
 2. You can now log in using your key pair like so: `ssh -i ~/.ssh/key.pem ubuntu@<aws-ip>`
 3. Install a recent version of R from [CRAN](http://cran.r-project.org) by following the directions at http://cran.r-project.org/bin/linux/ubuntu/ (assuming you're on Ubuntu).
 4. [Download RStudio Server](http://www.rstudio.com/products/rstudio/download-server/) and install it. You may need to replace `gdebi` with `dpkg -i` because X11 is not available.
-5. Add the following like to `/etc/rstudio/rserver.conf`. This forces RStudio to listen only for connections on localhost, so that a public key is still needed to access it.
-   www-address=127.0.0.1
+5. Add the following line to `/etc/rstudio/rserver.conf`. This forces RStudio to listen only for connections on localhost, so that a public key is still needed to access it.
+     www-address=127.0.0.1
 6. Restart RStudio Server: `sudo restart rstudio-server`
 7. Create a password for your login account: `sudo passwd your-user-name`. You won't be able to SSH in with this (assuming that you only allow public key auth), but you'll use it to
    log into RStudio.
@@ -36,7 +36,3 @@ Here's how to do it.
 10. Analyze away.
 
 Note that you are just accessing RStudio on AWS, so you'll need to have all of your data and R scripts on the server.
-   
-
-
-
