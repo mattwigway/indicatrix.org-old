@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-09-02 20:26:41'
-layout: single-post
+layout: post
 slug: gtfsrdb-plumbing-for-gtfs-realtime
 status: publish
 title: 'GTFSrDB: Plumbing for GTFS-realtime'

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-05-29 18:08:03'
-layout: single-post
+layout: post
 slug: changing-the-ownership-of-a-wordpress-blog
 status: publish
 title: Changing the Ownership of a WordPress Blog

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-07-11 21:10:59'
-layout: single-post
+layout: post
 slug: transit-appliance-at-oscon
 status: publish
 title: Transit Appliance at OSCON

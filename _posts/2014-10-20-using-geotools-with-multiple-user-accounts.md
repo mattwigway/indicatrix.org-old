@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 title: Using GeoTools with Multiple User Accounts
 ---
 

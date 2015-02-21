@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-04-01 05:15:09'
-layout: single-post
+layout: post
 slug: bart-shocker-first-inner-core-infill-station-since-embarcadero
 status: publish
 title: 'BART Shocker: First Inner-Core Infill Station Since Embarcadero'

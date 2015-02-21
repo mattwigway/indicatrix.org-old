@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 title: Running RStudio Server on Amazon EC2
 ---
 

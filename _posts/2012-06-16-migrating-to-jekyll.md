@@ -1,7 +1,7 @@
 ---
 title: Migrating to Jekyll
 author: mattwigway
-layout: single-post
+layout: post
 slug: migrating-to-jekyll
 date: 2012-06-16 14:00:00
 ---

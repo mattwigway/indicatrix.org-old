@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-06-19 22:08:22'
-layout: single-post
+layout: post
 slug: qgis-1-7-wroclaw-released
 status: publish
 title: QGIS 1.7 'Wroc&#0322;aw' Released!

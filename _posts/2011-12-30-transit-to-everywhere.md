@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-12-30 20:03:46'
-layout: single-post
+layout: post
 slug: transit-to-everywhere
 status: publish
 title: Transit to Everywhere

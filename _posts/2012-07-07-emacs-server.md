@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 title: Running an Emacs Server
 ---
 

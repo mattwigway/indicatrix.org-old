@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 status: publish
 title: Analyzing the Effects of Space and Time on Bikeshare Use
 ---

@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 slug: schellings-segregation-model-js
 status: publish
 title: Schelling's Segregation Model in JavaScript

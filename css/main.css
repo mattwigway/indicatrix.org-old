@@ -1,10 +1,12 @@
 .center { text-align: center }
-.vspacer { height: 14px }
-.vspacer5 { height: 70px }
 /* override bootstrap, make it darker */
 a { color: #0066aa }
 
-body { color: #000000; }
+body {
+  color: #000000;
+  /* ensure the header does not overflow */
+  padding-top: 44px;
+}
 
 p { text-align: justify }
 
@@ -12,21 +14,28 @@ p { text-align: justify }
 .next { float: right }
 .clear { clear: both }
 a img { border: 0px }
-.indicatrix { font-family: 'URW Bookman L', serif; font-weight: bold }
+.indicatrix { font-family: 'URW Bookman L', serif; font-weight: bold; color: #000 }
+
+nav a { color: #5a618b; }
 
 /* Pygments seems to use the .mi class and so does MathJax; override in
    the MathJax context */
 
 .MathJax .mi, .MathJax .mo { color: inherit }
 
+a.paper-title { color: #000 }
+
 /* Styles for the publications page */
 /* these shouldn't look like links */
 a.abstoggle { color: #000; }
 .citations { list-style-type: none }
-.citations > li { border: 1px solid #ccc; border-radius: 8px; padding: 8px; }
+.citations > li { padding-bottom: 20px }
 .citation { margin-left: 2em; text-indent: -2em; }
-.abstract { margin-left: 2em; display: block }
+.abstract { margin-left: 2em; display: block; padding-top: 5px }
 .abstract > p { padding-top: 12pt; }
+
+.post { margin-bottom: 50px }
+.post img { max-width: 100%; height: auto; }
 
 /* figures */
 figcaption { font-style: italic }
@@ -39,9 +48,10 @@ figcaption { font-style: italic }
     background-position: center;
     background-repeat: no-repeat;
     height: 163px;
-    margin-top: -30px;
     margin-bottom: 15px;
 }
+
+.navbar-plain { background-color: #fff; border-bottom: 1px solid #bbb }
 
 .header .container {
     height: 163px;

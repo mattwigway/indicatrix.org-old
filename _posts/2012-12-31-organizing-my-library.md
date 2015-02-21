@@ -2,7 +2,7 @@
 author: mattwigway
 slug: organizing-my-library
 status: draft
-layout: single-post
+layout: post
 title: Organizing My Library
 ---
 

@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 slug: microaccessibility-with-opentripplanner
 status: publish
 title: Microaccessibility with OpenTripPlanner

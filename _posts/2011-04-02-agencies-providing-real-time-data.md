@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-04-02 00:14:40'
-layout: single-post
+layout: post
 slug: agencies-providing-real-time-data
 status: publish
 title: Agencies Providing Real-Time Data

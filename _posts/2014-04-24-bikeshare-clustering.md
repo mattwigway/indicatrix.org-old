@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 title: Identifying Patterns in Bikeshare Trip Making
-layout: single-post
+layout: post
 ---
 
 <a href="http://projects.indicatrix.org/bikeshare-clustering"><img src="/img/2014/04/cluster.png" alt="One of the clustering graphs" /></a>

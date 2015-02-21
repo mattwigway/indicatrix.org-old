@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-05-25 13:53:47'
-layout: single-post
+layout: post
 slug: 1-2-3-mirror-modelling-in-inkscape
 status: publish
 title: '1-2-3: Mirror Modelling in Inkscape'

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-04-29 16:50:50'
-layout: single-post
+layout: post
 slug: measuring-urban-mobility-and-accessibility-using-opentripplanner-analyst
 status: publish
 permalink: cgs2012

@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 slug: a-simple-model-of-automobile-travel-time
 status: publish
 date: '2012-09-15 01:37:00-0700'

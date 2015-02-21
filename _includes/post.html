@@ -1,15 +1,13 @@
-<!-- link it b/c this template is used on the home page -->
-<a href="{{ post.url }}">
-  <h2>{{ post.title }}</h2>
-</a>
-
-{% if commentCount %}
+<div class="post">
+  <!-- link it b/c this template is used on the home page -->
+  <a href="{{ post.url }}">
+    <h2>{{ post.title }}</h2>
+  </a>
+  {% if commentCount %}
   <a href="{{ post.url }}#disqus_thread"> . . . </a>
-{% endif %}
-
-<p class="author">by {{post.author}} on {{post.date | date: '%B %d, %Y'}}</p>
-
-{{ content }}
-
-<!-- again, b/c it's used on the home page -->
-<a href="{{ post.url }}">Permalink to this post</a>
+  {% endif %}
+  <p class="author">by {{post.author}} on {{post.date | date: '%B %d, %Y'}}</p>
+  {{ content }}
+  <!-- again, b/c it's used on the home page -->
+  <a href="{{ post.url }}">Permalink to this post</a>
+</div>

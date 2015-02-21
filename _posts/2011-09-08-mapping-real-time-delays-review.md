@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-09-08 22:58:28'
-layout: single-post
+layout: post
 slug: mapping-real-time-delays-review
 status: publish
 title: 'Mapping Real-Time Delays: Review'

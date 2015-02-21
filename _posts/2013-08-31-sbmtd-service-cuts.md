@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 published: false
 title: Santa Barbara MTD Service Cuts
 ---

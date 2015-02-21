@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-04-06 16:36:02'
-layout: single-post
+layout: post
 slug: basemaps-in-qgis
 status: publish
 title: Basemaps in QGIS

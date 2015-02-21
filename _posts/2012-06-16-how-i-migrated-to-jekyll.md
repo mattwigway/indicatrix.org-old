@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 slug: how-i-migrated-to-jekyll
-layout: single-post
+layout: post
 title: How I Migrated to Jekyll
 date: 2012-06-16 18:13:00
 ---

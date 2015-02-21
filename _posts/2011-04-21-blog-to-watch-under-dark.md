@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-04-21 13:23:23'
-layout: single-post
+layout: post
 slug: blog-to-watch-under-dark
 status: publish
 title: 'Blog to Watch: Under Dark'

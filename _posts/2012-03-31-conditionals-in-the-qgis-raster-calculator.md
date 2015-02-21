@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-03-31 21:28:35'
-layout: single-post
+layout: post
 slug: conditionals-in-the-qgis-raster-calculator
 status: publish
 title: Conditionals in the QGIS raster calculator

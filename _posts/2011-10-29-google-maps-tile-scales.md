@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-10-29 09:41:04'
-layout: single-post
+layout: post
 slug: google-maps-tile-scales
 status: publish
 title: Google Maps Tile Scales

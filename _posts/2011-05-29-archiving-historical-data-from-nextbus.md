@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-05-29 19:11:00'
-layout: single-post
+layout: post
 slug: archiving-historical-data-from-nextbus
 status: publish
 title: Archiving Historical Data from NextBus

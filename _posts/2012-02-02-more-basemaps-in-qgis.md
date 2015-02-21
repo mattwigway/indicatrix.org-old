@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-02-02 17:55:11'
-layout: single-post
+layout: post
 slug: more-basemaps-in-qgis
 status: publish
 title: More Basemaps in QGIS

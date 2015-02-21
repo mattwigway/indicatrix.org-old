@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-07-25 21:43:37'
-layout: single-post
+layout: post
 slug: accessing-gtfs-data-in-qgis
 status: publish
 title: Accessing GTFS Data in QGIS

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-11-12 17:38:52'
-layout: single-post
+layout: post
 slug: making-transit-travel-speed-maps-with-open-source-gis
 status: publish
 title: Making Transit Travel Speed Maps with Open Source GIS

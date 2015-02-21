@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-03-03 21:53:31'
-layout: single-post
+layout: post
 slug: conditional-labels-in-qgis
 status: publish
 title: Conditional Labels in QGIS

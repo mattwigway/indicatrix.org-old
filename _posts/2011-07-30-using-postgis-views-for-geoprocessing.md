@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-07-30 18:08:08'
-layout: single-post
+layout: post
 slug: using-postgis-views-for-geoprocessing
 status: publish
 title: Using PostGIS Views for Geoprocessing

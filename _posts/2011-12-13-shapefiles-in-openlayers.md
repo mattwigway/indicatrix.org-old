@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-12-13 21:59:47'
-layout: single-post
+layout: post
 slug: shapefiles-in-openlayers
 status: publish
 title: Shapefiles in OpenLayers

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-05-28 21:57:18'
-layout: single-post
+layout: post
 slug: installing-qgis-1-7-on-fedora
 status: publish
 title: Installing QGIS-1.7 on Fedora

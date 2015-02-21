@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 slug: organizing-my-research
 status: publish
 title: Organizing my Research

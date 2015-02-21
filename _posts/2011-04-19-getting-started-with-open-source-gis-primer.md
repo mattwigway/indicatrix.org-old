@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-04-19 11:09:47'
-layout: single-post
+layout: post
 slug: getting-started-with-open-source-gis-primer
 status: publish
 title: 'Getting Started with Open-Source GIS: Primer'

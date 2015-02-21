@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2012-04-01 21:00:53'
-layout: single-post
+layout: post
 slug: elevators-in-opentripplanner
 status: publish
 title: Elevators in OpenTripPlanner

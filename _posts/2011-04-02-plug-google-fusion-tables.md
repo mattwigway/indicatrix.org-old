@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-04-02 05:26:29'
-layout: single-post
+layout: post
 slug: plug-google-fusion-tables
 status: publish
 title: 'Plug: Google Fusion Tables'

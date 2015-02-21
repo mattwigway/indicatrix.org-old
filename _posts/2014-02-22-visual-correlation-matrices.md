@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 status: publish
 title: Visual Correlation Matrices
 ---

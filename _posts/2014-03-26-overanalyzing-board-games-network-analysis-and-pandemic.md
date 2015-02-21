@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 title: "Overanalyzing Board Games: Network Analysis and Pandemic"
-layout: single-post
+layout: post
 ---
 
 <figure>

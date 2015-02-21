@@ -1,7 +1,7 @@
 ---
 title: Accessibility Analysis with Python and OpenTripPlanner
 author: mattwigway
-layout: single-post
+layout: post
 ---
 
 <figure class="pull-left" style="width: 355px">

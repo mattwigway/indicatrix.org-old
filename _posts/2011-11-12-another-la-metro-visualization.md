@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-11-12 18:06:04'
-layout: single-post
+layout: post
 slug: another-la-metro-visualization
 status: publish
 title: Another LA Metro Visualization

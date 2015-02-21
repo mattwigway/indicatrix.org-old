@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 slug: jane-jacobs-and-global-cities-cgs
-layout: single-post
+layout: post
 title: Jane Jacobs and Global Cities Presentation at the California Geographical Society
 ---
 

@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-12-23 17:14:00'
-layout: single-post
+layout: post
 slug: as-you-may-have
 status: publish
 title: GitHub Image Diffs

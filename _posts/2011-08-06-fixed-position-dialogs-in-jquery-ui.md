@@ -1,7 +1,7 @@
 ---
 author: mattwigway
 date: '2011-08-06 14:06:02'
-layout: single-post
+layout: post
 slug: fixed-position-dialogs-in-jquery-ui
 status: publish
 title: Fixed-position dialogs in jQuery UI

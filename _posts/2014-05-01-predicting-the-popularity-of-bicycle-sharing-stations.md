@@ -1,6 +1,6 @@
 ---
 author: mattwigway
-layout: single-post
+layout: post
 title: "Predicting the Popularity of Bicycle Sharing Stations: An Accessibility-Based Approach"
 ---
 
