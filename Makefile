@@ -4,7 +4,7 @@ site:
 	jekyll build
 
 serve:
-	jekyll serve
+	jekyll serve --drafts
 
 fast:
 	jekyll build

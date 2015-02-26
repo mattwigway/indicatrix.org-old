@@ -2,7 +2,7 @@ paginate: 5
 highlighter: pygments
 permalink: pretty
 markdown: rdiscount
-lsi: true
+lsi: false
 rdiscount:
   extensions: [smart]
 exclude: [Makefile]
