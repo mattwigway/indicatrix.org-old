@@ -57,7 +57,10 @@ I then ran [this code](https://gist.github.com/mattwigway/15c2d7dc64901f0f3cc5) 
 in Jython as opposed to standard Python, the OTP jar must be on the Jython classpath, and the opentripplanner-jython module
 must be in Jython's Python search path somewhere. I ran it like so:
 
-    CLASSPATH=~/opentripplanner/otp-latest-master.jar jython accessibility.py
+    CLASSPATH=~/opentripplanner/otp-latest-master.jar jython -J-Xmx8192m accessibility.py
+
+The `-J-Xmx8192m` tells the Java Virtual Machine to use 8GB of RAM. If you don't have that much, you can
+experiment with smaller numbers.
 
 I'll walk you through what the code does. It loads the graph which was previously built (which it expects to find
   in the graph subdirectory of the working directory), loads the destinations, links them to the graph, creates a batch
@@ -79,3 +82,5 @@ One caveat is that this library doesn't yet support
 [profile routing](https://github.com/opentripplanner/OpenTripPlanner/issues/1328), although OTP does. Profile routing
 is a much better way of doing general accessibility analysis for general queries for public transportation (e.g. how long does it take to get to work)
 versus extremely specific queries (if I leave _right now_, how long _exactly_ will it take me to get to work _today, right now_).
+
+_Update 2014-12-31:_ I added notes about memory consumption.
