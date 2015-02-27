@@ -1,6 +1,7 @@
 ---
 title: Game Theory and Snow Shoveling
 author: mattwigway
+layout: post
 ---
 
 <img src="/img/snow-shoveling/snow.jpg" alt="Snow in Washington, DC"/>
