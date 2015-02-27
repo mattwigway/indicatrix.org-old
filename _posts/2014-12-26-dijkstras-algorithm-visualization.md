@@ -1,7 +1,7 @@
 ---
 title: "Dijkstra's Algorithm Visualization in the Browser"
 author: mattwigway
-layout: single-post
+layout: post
 ---
 
 <a href="http://projects.indicatrix.org/dijkstra.js/"><img src="/img/2014/12/dijkstra.png" alt="visualization of Dijkstra's algorithm"/></a>
