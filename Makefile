@@ -1,13 +1,10 @@
-all: site deploy
+all: site
 
 site:
 	jekyll build
 
 serve:
 	jekyll serve --drafts
-
-fast:
-	jekyll build
 
 deploy:
 	rsync -r _site/ mattwigway_indicatrix@ssh.phx.nearlyfreespeech.net:
