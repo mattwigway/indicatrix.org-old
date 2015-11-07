@@ -1,7 +1,7 @@
 ---
 title: Pareto Surfaces and Urban Planning (or, why planning is hard)
 author: mattwigway
-----
+---
 
 Urban planning is the process through which we as a society decide how to guide future development of our
 cities. As anyone who's been involved in a planning process can tell you, it is a very difficult field. I
