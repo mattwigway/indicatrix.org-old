@@ -18,7 +18,7 @@ opposition, which they are. Another way to think of two opposing goals is as def
 of your goals is to have the highest possible ridership on your transit system, and another is to have
 bus service available to as many residents of the region as possible. We can plot this as a Pareto curve:
 
-<img src="/img/pareto/ridership.png"></img>
+<img src="/img/pareto/ridership.png" />
 
 Three scenarios are shown: the blue dot represents a higher-ridership but lower-coverage scenario,
 while the brown scenario has higher coverage but lower ridership. The black line represents the Pareto
